@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgjr3uqwiov8u"]
+
+[ext_resource type="FontFile" uid="uid://btktu5slgjifh" path="res://Resources/Fonts/zeldadxt.ttf" id="1_dox8v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bwu6m"]
+font = ExtResource("1_dox8v")
+font_color = Color(0.821218, 0.931988, 1, 1)
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[node name="PointStats" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "0000000"
+label_settings = SubResource("LabelSettings_bwu6m")
+horizontal_alignment = 2
+vertical_alignment = 1

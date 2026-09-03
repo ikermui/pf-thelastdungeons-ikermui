@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bp3den336hhjs"
+path="res://.godot/imported/cartelDesiertoVelmora.dialogue-e49f8f33bfa9b7214b815e41425fbb9a.tres"
+
+[deps]
+
+source_file="res://Dialogues/cartelDesiertoVelmora.dialogue"
+dest_files=["res://.godot/imported/cartelDesiertoVelmora.dialogue-e49f8f33bfa9b7214b815e41425fbb9a.tres"]
+
+[params]
+
+defaults=true

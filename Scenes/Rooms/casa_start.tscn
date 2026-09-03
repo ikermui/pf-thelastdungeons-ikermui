@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://prj1ueho7sj"]
+
+[ext_resource type="PackedScene" uid="uid://cm5ka4ykpbahq" path="res://Scenes/Tilemap/tm_player_house.tscn" id="1_4vvtl"]
+[ext_resource type="Script" uid="uid://c7llit3dth8hi" path="res://Scripts/Other/iniciojuego.gd" id="1_pt5ga"]
+[ext_resource type="PackedScene" uid="uid://d1aw725skuh60" path="res://Scenes/Player/player.tscn" id="2_85qnc"]
+[ext_resource type="PackedScene" uid="uid://bxukx3qifl07v" path="res://Scenes/Importants/change_room.tscn" id="3_kn247"]
+[ext_resource type="PackedScene" uid="uid://42ttm3g17kwc" path="res://Scenes/Items/recolectable_item.tscn" id="4_kn247"]
+[ext_resource type="PackedScene" uid="uid://ddlk4r2ef58ug" path="res://Scenes/Items/hookeable.tscn" id="6_pflhe"]
+[ext_resource type="PackedScene" uid="uid://c6ltla3oebx8o" path="res://Scenes/Items/chest.tscn" id="7_gas41"]
+
+[node name="casa_start" type="Node2D"]
+script = ExtResource("1_pt5ga")
+
+[node name="tm_playerHouse" parent="." instance=ExtResource("1_4vvtl")]
+
+[node name="Player" parent="." instance=ExtResource("2_85qnc")]
+position = Vector2(136, 111)
+
+[node name="ChangeRoom" parent="." instance=ExtResource("3_kn247")]
+position = Vector2(137, 174)
+nextScene = "res://Scenes/Rooms/pueblo_puerto.tscn"
+initialPosition = Vector2(444, 43)
+
+[node name="RecolectableItem" parent="." instance=ExtResource("4_kn247")]
+position = Vector2(178, 86)
+iditem = 5
+value = 3
+
+[node name="Hookeable" parent="." instance=ExtResource("6_pflhe")]
+position = Vector2(120, 56)
+
+[node name="Chest" parent="." instance=ExtResource("7_gas41")]
+position = Vector2(168, 56)
+item_type = 3
+item_value = 5
+
+[node name="RecolectableItem2" parent="." instance=ExtResource("4_kn247")]
+position = Vector2(213, 88)
+iditem = 2
+value = 40
+
+[node name="RecolectableItem3" parent="." instance=ExtResource("4_kn247")]
+position = Vector2(171, 118)
+iditem = 3
+value = 3
+
+[node name="RecolectableItem4" parent="." instance=ExtResource("4_kn247")]
+position = Vector2(210, 115)
+iditem = 5
+value = 1
+
+[node name="RecolectableItem5" parent="." instance=ExtResource("4_kn247")]
+position = Vector2(56, 85)
+iditem = 1
+value = 5
+
+[node name="Chest2" parent="." instance=ExtResource("7_gas41")]
+position = Vector2(136, 56)
+item_type = 4
+item_value = 5

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://57bxmqvlrnm5"]
+
+[ext_resource type="Script" uid="uid://0itwbrswgcjy" path="res://Scripts/Items/ally_hookshot.gd" id="1_0cyrv"]
+[ext_resource type="Texture2D" uid="uid://0ohj71cbc0ol" path="res://Resources/Items/Hookshot.png" id="1_26sev"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cyrv"]
+size = Vector2(4, 8)
+
+[node name="AllyHookshot" type="Node2D"]
+top_level = true
+z_index = 4
+script = ExtResource("1_0cyrv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_26sev")
+hframes = 2
+
+[node name="HookArea" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HookArea"]
+shape = SubResource("RectangleShape2D_0cyrv")

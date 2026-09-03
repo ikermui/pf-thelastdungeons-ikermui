@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bx01ot0ppgdqi"
+path="res://.godot/imported/shop_villaNPC.dialogue-b57a55cf1b6e913195414fd923e88095.tres"
+
+[deps]
+
+source_file="res://Dialogues/shop_villaNPC.dialogue"
+dest_files=["res://.godot/imported/shop_villaNPC.dialogue-b57a55cf1b6e913195414fd923e88095.tres"]
+
+[params]
+
+defaults=true

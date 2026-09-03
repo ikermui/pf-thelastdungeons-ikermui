@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwykoehss0rh2"]
+
+[ext_resource type="Script" uid="uid://c6x0nc4gd04aa" path="res://Scripts/Items/velmora_rune.gd" id="1_g0vjj"]
+[ext_resource type="Texture2D" uid="uid://cg13cid68kfnt" path="res://Resources/Other/runes.png" id="1_vs2ph"]
+[ext_resource type="Texture2D" uid="uid://lg6lgb7vs2xr" path="res://Resources/Other/LightTest.png" id="2_g0vjj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ipx02"]
+radius = 14.0357
+
+[node name="velmoraRune" type="Area2D"]
+script = ExtResource("1_g0vjj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_vs2ph")
+hframes = 16
+vframes = 11
+frame = 174
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ipx02")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.9
+texture = ExtResource("2_g0vjj")
+texture_scale = 5.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

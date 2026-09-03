@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfyl3vghgr1b5"]
+
+[ext_resource type="Texture2D" uid="uid://ctkcapkk8b8xx" path="res://Resources/Other/portalfloor.png" id="1_fll21"]
+
+[node name="tp_floor" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("1_fll21")

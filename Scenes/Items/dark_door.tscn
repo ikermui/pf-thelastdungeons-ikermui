@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp5qxj5jytup7"]
+
+[ext_resource type="Texture2D" uid="uid://cxdpq5kqtnmye" path="res://Resources/Items/World/closed.png" id="1_8lkia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lkia"]
+size = Vector2(44, 61)
+
+[node name="DarkDoor" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.0962047, 0.0962048, 0.0962047, 1)
+scale = Vector2(2, 3)
+texture = ExtResource("1_8lkia")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_8lkia")

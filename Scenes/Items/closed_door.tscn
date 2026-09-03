@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://ccsj34bsnvrg1"]
+
+[ext_resource type="Script" uid="uid://dd4he8lq5ux1k" path="res://Scripts/Items/closed_door.gd" id="1_i86we"]
+[ext_resource type="Texture2D" uid="uid://cxdpq5kqtnmye" path="res://Resources/Items/World/closed.png" id="1_mon0u"]
+[ext_resource type="Texture2D" uid="uid://by24iq7utp7tu" path="res://Resources/Items/World/candado.png" id="2_dg54t"]
+[ext_resource type="PackedScene" uid="uid://crudiqlm7dsv0" path="res://Scenes/Importants/action_area.tscn" id="4_61lwi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bp36s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i86we"]
+size = Vector2(22, 22)
+
+[node name="closed_door" type="Node2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_i86we")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 5.96046e-08)
+scale = Vector2(1, 1.1)
+texture = ExtResource("1_mon0u")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0.25, 0)
+scale = Vector2(0.535714, 0.5)
+texture = ExtResource("2_dg54t")
+
+[node name="ActionArea" parent="." instance=ExtResource("4_61lwi")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionArea"]
+shape = SubResource("RectangleShape2D_bp36s")
+debug_color = Color(0.778909, 0.840562, 0.969724, 0.42)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_i86we")

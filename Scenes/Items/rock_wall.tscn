@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtmlbklq2h3od"]
+
+[ext_resource type="Texture2D" uid="uid://mk7r7q4fo3nd" path="res://Resources/Items/World/RockWall.png" id="1_fifc1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ny0u2"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dibwc"]
+size = Vector2(36, 36)
+
+[node name="RockWall" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fifc1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_ny0u2")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 1024
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_dibwc")
+debug_color = Color(0.237649, 0.273563, 0.323409, 0.42)

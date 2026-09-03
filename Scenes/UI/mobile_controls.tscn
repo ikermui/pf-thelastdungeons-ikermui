@@ -1,0 +1,110 @@
+[gd_scene load_steps=12 format=3 uid="uid://bfq13d1f0d3f7"]
+
+[ext_resource type="Texture2D" uid="uid://cf7ixcjly6ia7" path="res://Resources/UI/leftscreen.png" id="1_rdj2j"]
+[ext_resource type="Texture2D" uid="uid://dmjkyh3wg8h2o" path="res://Resources/UI/upscreen.png" id="2_qm8px"]
+[ext_resource type="Texture2D" uid="uid://c6d2gvraaq51k" path="res://Resources/UI/xscreen.png" id="2_y8rup"]
+[ext_resource type="Texture2D" uid="uid://b8yscrg2x35s" path="res://Resources/UI/rightscreen.png" id="3_o2xrb"]
+[ext_resource type="Texture2D" uid="uid://dg0gnj82w3kod" path="res://Resources/UI/cscreen.png" id="3_wl2bc"]
+[ext_resource type="Texture2D" uid="uid://d2xqduxbi1qm0" path="res://Resources/UI/mscreen.png" id="4_74gtw"]
+[ext_resource type="Texture2D" uid="uid://cldb8i0ba3tfe" path="res://Resources/UI/downscreen.png" id="4_76q63"]
+[ext_resource type="Texture2D" uid="uid://bsmifava5a76u" path="res://Resources/UI/spacescreen.png" id="5_74gtw"]
+[ext_resource type="Texture2D" uid="uid://dmp3ug71cci40" path="res://Resources/UI/squarescreen.png" id="5_76q63"]
+[ext_resource type="Texture2D" uid="uid://0uaiomkclbs3" path="res://Resources/UI/enterscreen.png" id="6_y8rup"]
+[ext_resource type="Texture2D" uid="uid://mfcm74ovrkp" path="res://Resources/UI/zscreen.png" id="7_g2m4m"]
+
+[node name="MobileControls" type="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(231, 164)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("7_g2m4m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(189, 164)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("2_y8rup")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(141, 145)
+scale = Vector2(0.005, 0.005)
+texture = ExtResource("3_wl2bc")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(112, 146)
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("4_74gtw")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(127, 173)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_74gtw")
+
+[node name="LeftArrow" type="TouchScreenButton" parent="."]
+position = Vector2(1, 142)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_rdj2j")
+passby_press = true
+action = "ui_left"
+
+[node name="UpArrow" type="TouchScreenButton" parent="."]
+position = Vector2(30, 128)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_qm8px")
+passby_press = true
+action = "ui_up"
+
+[node name="RightArrow" type="TouchScreenButton" parent="."]
+position = Vector2(58, 142)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_o2xrb")
+passby_press = true
+action = "ui_right"
+
+[node name="DownArrow" type="TouchScreenButton" parent="."]
+position = Vector2(30, 157)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_76q63")
+passby_press = true
+action = "ui_down"
+
+[node name="KeyZ" type="TouchScreenButton" parent="."]
+position = Vector2(216, 149)
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("5_76q63")
+passby_press = true
+action = "ui_secondary_item"
+
+[node name="KeyM" type="TouchScreenButton" parent="."]
+position = Vector2(102, 136)
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("5_76q63")
+passby_press = true
+action = "key_m"
+
+[node name="KeyC" type="TouchScreenButton" parent="."]
+position = Vector2(131, 136)
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("5_76q63")
+passby_press = true
+action = "key_c"
+
+[node name="KeyX" type="TouchScreenButton" parent="."]
+position = Vector2(174, 149)
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("5_76q63")
+passby_press = true
+action = "key_x"
+
+[node name="EnterKey" type="TouchScreenButton" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(211, 87)
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("6_y8rup")
+passby_press = true
+action = "key_enter"
+
+[node name="SpaceKey" type="TouchScreenButton" parent="."]
+position = Vector2(97, 160)
+scale = Vector2(0.3, 0.125)
+texture_normal = ExtResource("5_76q63")
+action = "ui_accept"

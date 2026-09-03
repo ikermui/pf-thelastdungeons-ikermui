@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://d43hi0a7w527"
+path="res://.godot/imported/cartelCampoVelmora.dialogue-b35a32a5f56035588834abcdad3ac44d.tres"
+
+[deps]
+
+source_file="res://Dialogues/cartelCampoVelmora.dialogue"
+dest_files=["res://.godot/imported/cartelCampoVelmora.dialogue-b35a32a5f56035588834abcdad3ac44d.tres"]
+
+[params]
+
+defaults=true

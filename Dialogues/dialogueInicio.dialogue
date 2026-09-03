@@ -1,0 +1,16 @@
+~ start
+???: Es terrible...
+???: El poder oscuro esta invadiendo la región de Velmora...
+???: Mi nombre es Almyra
+Almyra: Se que no me conoces, pero yo a ti si, y se que eres el único capaz de arreglar esto...
+Almyra: En Velmora hay 3 mazmorras ocultas que guardan unas runas muy poderosas con las cuales podras abrir el castillo de Velmora.
+Almyra: Y en el castillo se encuentra una reliquia con la que disipar todo el poder oscuro.
+Almyra: Por favor, ¿me ayudaras con esta misión?
+~ choice
+- Si
+	Almyra: Muchas gracias Tharn, te recomiendo dirigirte hacia la Villa Verde al este del campo de velmora.
+	Almyra: Por cierto, te he dejado unos objetos para que te equipes.
+- No
+	Almyra: Esto no es ninguna broma, responde en serio por favor.
+	=> choice
+=> END

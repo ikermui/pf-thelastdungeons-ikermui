@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=3 uid="uid://86ra7i0hcemw"]
+
+[ext_resource type="Script" uid="uid://cwgoiuvssry0d" path="res://Scripts/Menu/main_menu.gd" id="1_7jtkx"]
+[ext_resource type="Texture2D" uid="uid://bfrm0fvwadsw4" path="res://Resources/UI/menubackground.jpg" id="1_bkwd7"]
+[ext_resource type="FontFile" uid="uid://btktu5slgjifh" path="res://Resources/Fonts/zeldadxt.ttf" id="2_tself"]
+[ext_resource type="Theme" uid="uid://dpw51owdlkggh" path="res://Themes/button_theme.tres" id="4_vmek6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7jtkx"]
+font = ExtResource("2_tself")
+font_size = 18
+font_color = Color(0, 0.615686, 0.329412, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7jtkx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+scale = Vector2(0.32, 0.295385)
+texture = ExtResource("1_bkwd7")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 28.0
+offset_right = 239.0
+offset_bottom = 54.0
+text = "THE LAST DUNGEONS"
+label_settings = SubResource("LabelSettings_7jtkx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 68.0
+offset_right = 211.0
+offset_bottom = 204.0
+scale = Vector2(0.75, 0.75)
+
+[node name="B_Jugar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_vmek6")
+text = "JUGAR"
+icon_alignment = 1
+
+[node name="B_Puntuacion" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_vmek6")
+text = "PUNTUACION"
+
+[node name="B_Cuenta" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_vmek6")
+text = "CUENTA"
+
+[node name="B_Salir" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_vmek6")
+text = "SALIR"
+
+[connection signal="pressed" from="VBoxContainer/B_Jugar" to="." method="jugar"]
+[connection signal="pressed" from="VBoxContainer/B_Puntuacion" to="." method="verTabla"]
+[connection signal="pressed" from="VBoxContainer/B_Cuenta" to="." method="cuenta"]
+[connection signal="pressed" from="VBoxContainer/B_Salir" to="." method="salir"]

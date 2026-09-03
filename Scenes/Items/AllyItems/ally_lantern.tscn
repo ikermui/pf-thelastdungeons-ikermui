@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgc5ji5cgfqyy"]
+
+[ext_resource type="Texture2D" uid="uid://cdvkjxf1pmp0" path="res://Resources/Items/Lantern.png" id="1_emwqe"]
+[ext_resource type="Script" uid="uid://bduj072xhyfm8" path="res://Scripts/Items/ally_lantern.gd" id="1_xgegg"]
+[ext_resource type="Texture2D" uid="uid://lg6lgb7vs2xr" path="res://Resources/Other/LightTest.png" id="2_xgegg"]
+
+[node name="Lantern" type="Node2D"]
+z_index = 5
+script = ExtResource("1_xgegg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_emwqe")
+hframes = 4
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+z_index = 16
+texture = ExtResource("2_xgegg")
+texture_scale = 4.25

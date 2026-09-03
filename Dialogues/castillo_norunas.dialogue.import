@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://cm7t6osbnct1m"
+path="res://.godot/imported/castillo_norunas.dialogue-a6818404e6a38599ebe461ff53310877.tres"
+
+[deps]
+
+source_file="res://Dialogues/castillo_norunas.dialogue"
+dest_files=["res://.godot/imported/castillo_norunas.dialogue-a6818404e6a38599ebe461ff53310877.tres"]
+
+[params]
+
+defaults=true

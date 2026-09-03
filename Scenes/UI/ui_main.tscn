@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=3 uid="uid://b6mcif4t6udw2"]
+
+[ext_resource type="PackedScene" uid="uid://ctkl8pt7qi6p3" path="res://Scenes/UI/ui_actual_object.tscn" id="1_h3s1k"]
+[ext_resource type="Script" uid="uid://cb0bkkq3q2eyr" path="res://Scripts/UI/uiController.gd" id="1_rad5t"]
+[ext_resource type="PackedScene" uid="uid://dtgmbf47nkqa0" path="res://Scenes/UI/ui_health.tscn" id="2_rad5t"]
+[ext_resource type="PackedScene" uid="uid://exkm2jg8bm6" path="res://Scenes/UI/ui_mana_bar.tscn" id="3_ch3em"]
+[ext_resource type="PackedScene" uid="uid://c4djg0qkkjvyd" path="res://Scenes/UI/ui_stats.tscn" id="4_w4ov1"]
+[ext_resource type="PackedScene" uid="uid://da2u33dkl2hh2" path="res://Scenes/UI/inventory_system.tscn" id="6_ch3em"]
+[ext_resource type="PackedScene" uid="uid://by5n8rdci8ejr" path="res://Scenes/UI/death_screen.tscn" id="7_w4ov1"]
+[ext_resource type="PackedScene" uid="uid://dgjr3uqwiov8u" path="res://Scenes/UI/point_stats.tscn" id="8_uu28k"]
+[ext_resource type="PackedScene" uid="uid://bphi200doqrys" path="res://Scenes/UI/world_map.tscn" id="9_3cdfh"]
+[ext_resource type="PackedScene" uid="uid://c1we4xw3pt3v1" path="res://Scenes/UI/pause_game.tscn" id="10_pdkl4"]
+[ext_resource type="PackedScene" uid="uid://domc1d4a0ilau" path="res://Scenes/UI/ui_keys.tscn" id="11_mnjlg"]
+
+[node name="UIMain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rad5t")
+
+[node name="UIActualObject" parent="." instance=ExtResource("1_h3s1k")]
+layout_mode = 0
+offset_left = 224.0
+offset_right = 256.0
+
+[node name="UIHealth" parent="." instance=ExtResource("2_rad5t")]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 6.0
+offset_right = 105.0
+offset_bottom = 14.0
+
+[node name="UIManaBar" parent="." instance=ExtResource("3_ch3em")]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 24.0
+
+[node name="UIStats" parent="." instance=ExtResource("4_w4ov1")]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 12.0
+offset_right = 93.0
+offset_bottom = 28.0
+
+[node name="PointStats" parent="." instance=ExtResource("8_uu28k")]
+layout_mode = 0
+offset_left = 184.0
+offset_top = -2.0
+offset_right = 262.0
+offset_bottom = 43.0
+scale = Vector2(0.53, 0.53)
+
+[node name="ui_keys" parent="." instance=ExtResource("11_mnjlg")]
+visible = false
+layout_mode = 1
+offset_left = 236.0
+offset_top = 36.0
+offset_right = -3.0
+offset_bottom = -146.0
+
+[node name="InventorySystem" parent="." instance=ExtResource("6_ch3em")]
+layout_mode = 1
+
+[node name="WorldMap" parent="." instance=ExtResource("9_3cdfh")]
+layout_mode = 1
+
+[node name="DeathScreen" parent="." instance=ExtResource("7_w4ov1")]
+layout_mode = 1
+
+[node name="pause_game" parent="." instance=ExtResource("10_pdkl4")]
+layout_mode = 1

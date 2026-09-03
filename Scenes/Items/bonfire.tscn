@@ -1,0 +1,102 @@
+[gd_scene load_steps=14 format=3 uid="uid://bjge2xbprq8l0"]
+
+[ext_resource type="Script" uid="uid://c4wkde1u86so8" path="res://Scripts/Items/bonfire.gd" id="1_ey4mg"]
+[ext_resource type="Texture2D" uid="uid://dvyq6dm55wi4p" path="res://Resources/Items/IronBonfire.png" id="2_ntnmh"]
+[ext_resource type="Texture2D" uid="uid://ca531qr505mgi" path="res://Resources/Items/World/FlameAnim.png" id="3_eg4ta"]
+[ext_resource type="Texture2D" uid="uid://lg6lgb7vs2xr" path="res://Resources/Other/LightTest.png" id="4_fisuk"]
+[ext_resource type="PackedScene" uid="uid://crudiqlm7dsv0" path="res://Scenes/Importants/action_area.tscn" id="5_x1vum"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c7l22"]
+size = Vector2(16, 11)
+
+[sub_resource type="Animation" id="Animation_qvvxe"]
+resource_name = "Idle"
+length = 0.5
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_s7uqt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a6luv"]
+_data = {
+&"Idle": SubResource("Animation_qvvxe"),
+&"RESET": SubResource("Animation_s7uqt")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kjaed"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8pydx"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ij2av"]
+states/Idle/node = SubResource("AnimationNodeAnimation_kjaed")
+states/Idle/position = Vector2(518, 102)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_8pydx")]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_os52p"]
+size = Vector2(22, 22)
+
+[node name="Bonfire" type="Node2D"]
+script = ExtResource("1_ey4mg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ntnmh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_c7l22")
+
+[node name="Flame" type="Sprite2D" parent="."]
+visible = false
+z_index = 16
+position = Vector2(0, -6)
+texture = ExtResource("3_eg4ta")
+hframes = 6
+
+[node name="PointLight2D" type="PointLight2D" parent="Flame"]
+position = Vector2(0, 6)
+texture = ExtResource("4_fisuk")
+texture_scale = 5.5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Flame"]
+libraries = {
+&"": SubResource("AnimationLibrary_a6luv")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="Flame"]
+tree_root = SubResource("AnimationNodeStateMachine_ij2av")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="ActionArea" parent="." instance=ExtResource("5_x1vum")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionArea"]
+shape = SubResource("RectangleShape2D_os52p")
+debug_color = Color(0.996713, 0.0491003, 3.85046e-07, 0.42)

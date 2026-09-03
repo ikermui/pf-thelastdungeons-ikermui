@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://da2u33dkl2hh2"]
+
+[ext_resource type="Texture2D" uid="uid://bo2m28uk5i4fg" path="res://Resources/UI/FondoBlack.png" id="1_4ookg"]
+[ext_resource type="Script" uid="uid://buoekmn3j40hl" path="res://Scripts/UI/InventorySystem.gd" id="1_beuf4"]
+[ext_resource type="Texture2D" uid="uid://d3d60vr1ku4ip" path="res://Resources/UI/GUIInventory.png" id="2_beuf4"]
+[ext_resource type="Texture2D" uid="uid://bafxkdqrcym0r" path="res://Resources/UI/HighlightInventory.png" id="3_ciloj"]
+[ext_resource type="FontFile" uid="uid://btktu5slgjifh" path="res://Resources/Fonts/zeldadxt.ttf" id="4_0t6gt"]
+[ext_resource type="Texture2D" uid="uid://bg677fj4sukoh" path="res://Resources/Items/Icons/ArrowIcon.png" id="5_62hj5"]
+[ext_resource type="Script" uid="uid://v238ei0wtjxu" path="res://Scripts/UI/InventoryItem.gd" id="6_eu18c"]
+[ext_resource type="Texture2D" uid="uid://bfshjyfh0mh8y" path="res://Resources/Items/Icons/HookshotIcon.png" id="7_sqd4t"]
+[ext_resource type="Texture2D" uid="uid://cwt1bjhisvvnd" path="res://Resources/Items/Icons/LanternIcon.png" id="8_8n8wo"]
+[ext_resource type="Texture2D" uid="uid://b77poqp0jkn1n" path="res://Resources/Items/Bomb.png" id="9_w68uk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1870i"]
+font_size = 42
+font_color = Color(0.356863, 0.941176, 0.701961, 1)
+outline_size = 8
+outline_color = Color(0.215686, 0.305882, 0.137255, 1)
+
+[node name="InventorySystem" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_beuf4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.282353)
+scale = Vector2(1, 1.33333)
+texture = ExtResource("1_4ookg")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("2_beuf4")
+centered = false
+
+[node name="HighLight" type="Sprite2D" parent="."]
+position = Vector2(26, 72)
+texture = ExtResource("3_ciloj")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 140.0
+offset_right = 592.0
+offset_bottom = 310.0
+scale = Vector2(0.2, 0.2)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("4_0t6gt")
+theme_override_font_sizes/font_size = 40
+text = "000"
+label_settings = SubResource("LabelSettings_1870i")
+autowrap_mode = 3
+
+[node name="Selectables" type="Node2D" parent="."]
+
+[node name="Item1" type="Sprite2D" parent="Selectables"]
+position = Vector2(26, 73)
+texture = ExtResource("5_62hj5")
+script = ExtResource("6_eu18c")
+description = "Arco y Flechas"
+
+[node name="Item2" type="Sprite2D" parent="Selectables"]
+position = Vector2(49, 73)
+texture = ExtResource("7_sqd4t")
+script = ExtResource("6_eu18c")
+description = "Gancho"
+idItem = 3
+
+[node name="Item3" type="Sprite2D" parent="Selectables"]
+position = Vector2(72, 73)
+texture = ExtResource("8_8n8wo")
+script = ExtResource("6_eu18c")
+description = "Linterna"
+idItem = 4
+
+[node name="Item4" type="Sprite2D" parent="Selectables"]
+position = Vector2(95, 73)
+texture = ExtResource("9_w68uk")
+script = ExtResource("6_eu18c")
+description = "Bombas Explosivas"
+idItem = 5

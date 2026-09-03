@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddlk4r2ef58ug"]
+
+[ext_resource type="Texture2D" uid="uid://drcdlmxya5myy" path="res://Resources/Items/World/WoodBox.png" id="1_7h734"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwkqd"]
+size = Vector2(14, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oa385"]
+size = Vector2(14, 15)
+
+[node name="Hookeable" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7h734")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_wwkqd")
+
+[node name="NearableItem" type="Area2D" parent="."]
+collision_layer = 512
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NearableItem"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_oa385")
+debug_color = Color(0.524596, 0.540669, 0.528504, 0.42)

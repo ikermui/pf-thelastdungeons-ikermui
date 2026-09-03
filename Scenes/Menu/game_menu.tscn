@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=3 uid="uid://c224upwdfno3u"]
+
+[ext_resource type="PackedScene" uid="uid://86ra7i0hcemw" path="res://Scenes/Menu/main_menu.tscn" id="1_b8pvs"]
+[ext_resource type="Script" uid="uid://boa61sgg8lanh" path="res://Scripts/Menu/game_menu.gd" id="1_s6olj"]
+[ext_resource type="PackedScene" uid="uid://btw1l7u0u4uan" path="res://Scenes/Importants/data_controller.tscn" id="2_ke5np"]
+[ext_resource type="PackedScene" uid="uid://d13totr5a1xod" path="res://Scenes/Menu/menu_points.tscn" id="3_ke5np"]
+[ext_resource type="PackedScene" uid="uid://dsndjcsqhv5ed" path="res://Scenes/Menu/cuenta_acceso.tscn" id="5_f7woa"]
+[ext_resource type="PackedScene" uid="uid://c401bxhgo5evr" path="res://Scenes/Menu/cuenta_datos.tscn" id="6_32lrq"]
+[ext_resource type="PackedScene" uid="uid://beohxrk8jhrtr" path="res://Scenes/Menu/cuenta_login.tscn" id="7_0w10x"]
+[ext_resource type="PackedScene" uid="uid://cs3exavacyfci" path="res://Scenes/Menu/cuenta_register.tscn" id="8_bisqj"]
+[ext_resource type="FontFile" uid="uid://btktu5slgjifh" path="res://Resources/Fonts/zeldadxt.ttf" id="9_md30w"]
+[ext_resource type="Texture2D" uid="uid://dq0hhmovtr6i3" path="res://Resources/UI/usericon.png" id="10_51pf8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_66nro"]
+font = ExtResource("9_md30w")
+font_size = 8
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s6olj")
+
+[node name="DataController" parent="." instance=ExtResource("2_ke5np")]
+
+[node name="MainMenu" parent="." instance=ExtResource("1_b8pvs")]
+layout_mode = 1
+
+[node name="menu_points" parent="." instance=ExtResource("3_ke5np")]
+visible = false
+layout_mode = 1
+
+[node name="cuenta_acceso" parent="." instance=ExtResource("5_f7woa")]
+visible = false
+layout_mode = 1
+
+[node name="cuenta_datos" parent="." instance=ExtResource("6_32lrq")]
+visible = false
+layout_mode = 1
+
+[node name="cuenta_login" parent="." instance=ExtResource("7_0w10x")]
+visible = false
+layout_mode = 1
+
+[node name="cuenta_register" parent="." instance=ExtResource("8_bisqj")]
+visible = false
+layout_mode = 1
+
+[node name="Account" type="Label" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 177.0
+offset_right = 156.0
+offset_bottom = 200.0
+text = "N/A"
+label_settings = SubResource("LabelSettings_66nro")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(14, 176.688)
+scale = Vector2(0.09, 0.096875)
+texture = ExtResource("10_51pf8")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://7meojwrxekvb"
+path="res://.godot/imported/lake_rune.dialogue-514cf436977a307e0cf5f0bcda26d692.tres"
+
+[deps]
+
+source_file="res://Dialogues/lake_rune.dialogue"
+dest_files=["res://.godot/imported/lake_rune.dialogue-514cf436977a307e0cf5f0bcda26d692.tres"]
+
+[params]
+
+defaults=true

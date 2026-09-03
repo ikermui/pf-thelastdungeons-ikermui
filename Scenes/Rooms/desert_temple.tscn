@@ -1,0 +1,416 @@
+[gd_scene load_steps=15 format=3 uid="uid://c1jap8mgrftnf"]
+
+[ext_resource type="PackedScene" uid="uid://jui73eymntqa" path="res://Scenes/Tilemap/tm_desert_temple.tscn" id="1_1dtku"]
+[ext_resource type="Script" uid="uid://bydn3bmqhtlod" path="res://Scripts/Rooms/desert_temple.gd" id="1_5garr"]
+[ext_resource type="PackedScene" uid="uid://d1aw725skuh60" path="res://Scenes/Player/player.tscn" id="2_fn1ee"]
+[ext_resource type="PackedScene" uid="uid://ddlk4r2ef58ug" path="res://Scenes/Items/hookeable.tscn" id="3_eyij6"]
+[ext_resource type="PackedScene" uid="uid://bfyl3vghgr1b5" path="res://Scenes/Items/tp_floor.tscn" id="4_0lsv0"]
+[ext_resource type="PackedScene" uid="uid://dnc2nquddum3s" path="res://Scenes/Importants/teleport_player.tscn" id="5_3rk0h"]
+[ext_resource type="PackedScene" uid="uid://bxukx3qifl07v" path="res://Scenes/Importants/change_room.tscn" id="6_b7fj6"]
+[ext_resource type="PackedScene" uid="uid://jgx6ldnvs1fb" path="res://Scenes/Items/desert_rune.tscn" id="7_0s4f8"]
+[ext_resource type="PackedScene" uid="uid://2qlhgfm2c2js" path="res://Scenes/Items/dungeon_key.tscn" id="8_a22uc"]
+[ext_resource type="PackedScene" uid="uid://c6ltla3oebx8o" path="res://Scenes/Items/chest.tscn" id="9_6ys2e"]
+[ext_resource type="PackedScene" uid="uid://42ttm3g17kwc" path="res://Scenes/Items/recolectable_item.tscn" id="10_7lgic"]
+[ext_resource type="PackedScene" uid="uid://ccsj34bsnvrg1" path="res://Scenes/Items/closed_door.tscn" id="11_h8j6d"]
+[ext_resource type="PackedScene" uid="uid://dtmlbklq2h3od" path="res://Scenes/Items/rock_wall.tscn" id="12_3xdwk"]
+[ext_resource type="PackedScene" uid="uid://bvfnmyvfjgoyq" path="res://Scenes/Enemies/enemy_skeleton.tscn" id="14_31bie"]
+
+[node name="desert_temple" type="Node2D"]
+script = ExtResource("1_5garr")
+
+[node name="tm_desert_temple" parent="." instance=ExtResource("1_1dtku")]
+
+[node name="Player" parent="." instance=ExtResource("2_fn1ee")]
+position = Vector2(158, 155)
+
+[node name="Hookeable" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(359, -72)
+
+[node name="Hookeable2" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(311, 7)
+
+[node name="Hookeable3" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(40, -424)
+
+[node name="Hookeable4" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(39, -507)
+
+[node name="Hookeable6" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(824, -377)
+
+[node name="Hookeable7" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1527, -218)
+
+[node name="Hookeable8" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1544, -137)
+
+[node name="Hookeable9" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(312, 455)
+
+[node name="Hookeable10" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(231, 471)
+
+[node name="Hookeable11" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(311, 519)
+
+[node name="Hookeable12" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(392, 503)
+
+[node name="Hookeable13" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(424, 518)
+
+[node name="Hookeable14" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(440, 600)
+
+[node name="Hookeable15" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(440, 648)
+
+[node name="Hookeable16" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(359, 663)
+
+[node name="Hookeable17" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(328, 679)
+
+[node name="Hookeable18" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(247, 663)
+
+[node name="Hookeable19" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(87, 663)
+
+[node name="Hookeable20" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(167, 680)
+
+[node name="Hookeable21" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(71, 616)
+
+[node name="Hookeable22" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(88, 532)
+
+[node name="Hookeable23" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(966, 391)
+
+[node name="Hookeable24" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1048, 359)
+
+[node name="Hookeable25" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(919, 229)
+
+[node name="Hookeable26" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(952, 312)
+
+[node name="Hookeable27" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1624, 389)
+
+[node name="Hookeable28" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1575, 472)
+
+[node name="Hookeable29" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1624, 213)
+
+[node name="Hookeable30" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1575, 296)
+
+[node name="Hookeable31" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1430, 391)
+
+[node name="Hookeable32" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1430, 295)
+
+[node name="Hookeable33" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1768, 295)
+
+[node name="Hookeable34" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1768, 391)
+
+[node name="Hookeable35" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1512, 374)
+
+[node name="Hookeable36" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1512, 311)
+
+[node name="Hookeable37" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1687, 311)
+
+[node name="Hookeable38" parent="." instance=ExtResource("3_eyij6")]
+position = Vector2(1686, 375)
+
+[node name="tp_floor" parent="." instance=ExtResource("4_0lsv0")]
+position = Vector2(-455, -585)
+
+[node name="tp_floor2" parent="." instance=ExtResource("4_0lsv0")]
+position = Vector2(583, -985)
+
+[node name="tp_floor3" parent="." instance=ExtResource("4_0lsv0")]
+position = Vector2(583, -968)
+
+[node name="tp_floor4" parent="." instance=ExtResource("4_0lsv0")]
+position = Vector2(103, -425)
+
+[node name="tp_floor5" parent="." instance=ExtResource("4_0lsv0")]
+position = Vector2(1095, -9)
+
+[node name="tp_floor6" parent="." instance=ExtResource("4_0lsv0")]
+position = Vector2(1111, -9)
+
+[node name="tp_floor7" parent="." instance=ExtResource("4_0lsv0")]
+position = Vector2(967, 488)
+
+[node name="tp_floor8" parent="." instance=ExtResource("4_0lsv0")]
+position = Vector2(439, -585)
+
+[node name="tp_floor9" parent="." instance=ExtResource("4_0lsv0")]
+position = Vector2(456, -585)
+
+[node name="teleport_player" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(-455, -585)
+newPosition = Vector2(79, -426)
+
+[node name="teleport_player2" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(103, -425)
+newPosition = Vector2(-430, -587)
+
+[node name="teleport_player3" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(583, -976)
+scale = Vector2(1, 2)
+newPosition = Vector2(1103, -41)
+
+[node name="teleport_player4" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(447, -585)
+scale = Vector2(2, 1)
+newPosition = Vector2(967, 522)
+
+[node name="teleport_player5" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(967, 488)
+newPosition = Vector2(449, -615)
+
+[node name="teleport_player6" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(1103, -9)
+scale = Vector2(2, 1)
+newPosition = Vector2(551, -976)
+
+[node name="teleport_player7" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(336, -164)
+newPosition = Vector2(208, -374)
+
+[node name="teleport_player8" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(208, -336)
+newPosition = Vector2(337, -128)
+
+[node name="teleport_player9" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(32, -691)
+newPosition = Vector2(-62, -964)
+
+[node name="teleport_player10" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(-64, -924)
+newPosition = Vector2(33, -649)
+
+[node name="teleport_player11" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(256, -926)
+newPosition = Vector2(448, -657)
+
+[node name="teleport_player12" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(448, -693)
+newPosition = Vector2(255, -964)
+
+[node name="teleport_player13" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(352, -926)
+newPosition = Vector2(799, -623)
+
+[node name="teleport_player14" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(800, -659)
+newPosition = Vector2(353, -963)
+
+[node name="teleport_player15" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(514, -417)
+newPosition = Vector2(741, -384)
+
+[node name="teleport_player16" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(703, -384)
+newPosition = Vector2(475, -417)
+
+[node name="teleport_player17" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(1072, -285)
+newPosition = Vector2(864, -112)
+
+[node name="teleport_player18" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(864, -147)
+newPosition = Vector2(1072, -325)
+
+[node name="teleport_player19" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(1104, -148)
+newPosition = Vector2(1409, -36)
+
+[node name="teleport_player20" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(1408, 3)
+newPosition = Vector2(1105, -113)
+
+[node name="teleport_player21" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(864, 36)
+newPosition = Vector2(1090, 350)
+
+[node name="teleport_player22" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(1088, 316)
+newPosition = Vector2(864, -4)
+
+[node name="teleport_player23" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(816, 467)
+newPosition = Vector2(220, 446)
+
+[node name="teleport_player24" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(208, 413)
+newPosition = Vector2(815, 428)
+
+[node name="teleport_player25" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(1088, 525)
+newPosition = Vector2(1584, 494)
+
+[node name="teleport_player26" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(1600, 533)
+newPosition = Vector2(1085, 567)
+
+[node name="teleport_player27" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(1904, 3)
+newPosition = Vector2(1612, 190)
+
+[node name="teleport_player28" parent="." instance=ExtResource("5_3rk0h")]
+position = Vector2(1600, 156)
+newPosition = Vector2(1904, -36)
+
+[node name="ChangeRoom" parent="." instance=ExtResource("6_b7fj6")]
+position = Vector2(160, 194)
+nextScene = "res://Scenes/Rooms/velmora_desert.tscn"
+initialPosition = Vector2(-345, 263)
+
+[node name="DesertRune" parent="." instance=ExtResource("7_0s4f8")]
+position = Vector2(1903, -121)
+
+[node name="dungeon_key" parent="." instance=ExtResource("8_a22uc")]
+position = Vector2(81, 459)
+
+[node name="dungeon_key2" parent="." instance=ExtResource("8_a22uc")]
+position = Vector2(1376, -274)
+
+[node name="Chest" parent="." instance=ExtResource("9_6ys2e")]
+position = Vector2(-328, -585)
+item_value = 25
+
+[node name="Chest2" parent="." instance=ExtResource("9_6ys2e")]
+position = Vector2(503, 646)
+item_type = 4
+item_value = 5
+
+[node name="Chest3" parent="." instance=ExtResource("9_6ys2e")]
+position = Vector2(327, -441)
+item_type = 4
+item_value = 5
+
+[node name="Chest4" parent="." instance=ExtResource("9_6ys2e")]
+position = Vector2(72, 7)
+item_type = 4
+item_value = 5
+
+[node name="Chest5" parent="." instance=ExtResource("9_6ys2e")]
+position = Vector2(1576, -297)
+item_value = 20
+
+[node name="RecolectableItem" parent="." instance=ExtResource("10_7lgic")]
+position = Vector2(1015, -105)
+scale = Vector2(1.1, 1.1)
+iditem = 5
+value = 3
+
+[node name="RecolectableItem2" parent="." instance=ExtResource("10_7lgic")]
+position = Vector2(344, 599)
+iditem = 3
+value = 3
+
+[node name="RecolectableItem3" parent="." instance=ExtResource("10_7lgic")]
+position = Vector2(1007, -1)
+iditem = 3
+value = 3
+
+[node name="RecolectableItem4" parent="." instance=ExtResource("10_7lgic")]
+position = Vector2(-329, -618)
+iditem = 5
+value = 2
+
+[node name="RecolectableItem5" parent="." instance=ExtResource("10_7lgic")]
+position = Vector2(-329, -552)
+iditem = 5
+value = 1
+
+[node name="RecolectableItem6" parent="." instance=ExtResource("10_7lgic")]
+position = Vector2(-67, -1009)
+iditem = 4
+value = 3
+
+[node name="RecolectableItem7" parent="." instance=ExtResource("10_7lgic")]
+position = Vector2(1766, 342)
+iditem = 5
+value = 2
+
+[node name="RecolectableItem8" parent="." instance=ExtResource("10_7lgic")]
+position = Vector2(1431, 342)
+value = 2
+
+[node name="Chest6" parent="." instance=ExtResource("9_6ys2e")]
+position = Vector2(905, -409)
+item_type = 5
+item_value = 3
+
+[node name="closed_door" parent="." instance=ExtResource("11_h8j6d")]
+position = Vector2(1088, 528)
+
+[node name="closed_door2" parent="." instance=ExtResource("11_h8j6d")]
+position = Vector2(800, -656)
+
+[node name="RockWall" parent="." instance=ExtResource("12_3xdwk")]
+position = Vector2(816, 465)
+rotation = 3.14159
+
+[node name="RockWall2" parent="." instance=ExtResource("12_3xdwk")]
+position = Vector2(32, -689)
+
+[node name="RockWall3" parent="." instance=ExtResource("12_3xdwk")]
+position = Vector2(1103, -145)
+
+[node name="RockWall4" parent="." instance=ExtResource("12_3xdwk")]
+position = Vector2(1600, 159)
+
+[node name="Enemy_Skeleton" parent="." instance=ExtResource("14_31bie")]
+position = Vector2(344, 32)
+
+[node name="Enemy_Skeleton2" parent="." instance=ExtResource("14_31bie")]
+position = Vector2(149, -1077)
+
+[node name="Enemy_Skeleton3" parent="." instance=ExtResource("14_31bie")]
+position = Vector2(309, -570)
+
+[node name="Enemy_Skeleton4" parent="." instance=ExtResource("14_31bie")]
+position = Vector2(389, -379)
+
+[node name="Enemy_Skeleton5" parent="." instance=ExtResource("14_31bie")]
+position = Vector2(209, 686)
+
+[node name="Enemy_Skeleton6" parent="." instance=ExtResource("14_31bie")]
+position = Vector2(468, 683)
+
+[node name="Enemy_Skeleton7" parent="." instance=ExtResource("14_31bie")]
+position = Vector2(816, 223)
+
+[node name="Enemy_Skeleton8" parent="." instance=ExtResource("14_31bie")]
+position = Vector2(1082, 579)
+
+[node name="Enemy_Skeleton9" parent="." instance=ExtResource("14_31bie")]
+position = Vector2(1529, -77)
+
+[node name="Enemy_Skeleton10" parent="." instance=ExtResource("14_31bie")]
+position = Vector2(869, -579)
+
+[node name="Enemy_Skeleton11" parent="." instance=ExtResource("14_31bie")]
+position = Vector2(1009, -372)
+
+[node name="Enemy_Skeleton12" parent="." instance=ExtResource("14_31bie")]
+position = Vector2(1658, 304)
+scale = Vector2(2.5, 2.5)
+enemyHealth = 15

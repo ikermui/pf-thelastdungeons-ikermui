@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://daso5ronmrd2x"
+path="res://.godot/imported/healing_logan.dialogue-18d7acc6d0d5e8a5b2f4ab329fe481ac.tres"
+
+[deps]
+
+source_file="res://Dialogues/healing_logan.dialogue"
+dest_files=["res://.godot/imported/healing_logan.dialogue-18d7acc6d0d5e8a5b2f4ab329fe481ac.tres"]
+
+[params]
+
+defaults=true

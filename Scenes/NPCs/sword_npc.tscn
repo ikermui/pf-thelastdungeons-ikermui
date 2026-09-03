@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsgt7qgmsnnit"]
+
+[ext_resource type="Texture2D" uid="uid://f5rav7ewp20l" path="res://Resources/NPCs/Knight_Asset_Pack/PNGs/IDLE/Knight_Idle4.png" id="1_2b10n"]
+[ext_resource type="Script" uid="uid://car1n0l1kgxrh" path="res://Scripts/NPCs/sword_npc.gd" id="1_6b6ij"]
+[ext_resource type="PackedScene" uid="uid://crudiqlm7dsv0" path="res://Scenes/Importants/action_area.tscn" id="2_6b6ij"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3xv3"]
+size = Vector2(11, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lchu8"]
+size = Vector2(13, 19)
+
+[node name="sword_npc" type="Node2D"]
+script = ExtResource("1_6b6ij")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(12, -5)
+scale = Vector2(1, 0.90625)
+texture = ExtResource("1_2b10n")
+
+[node name="ActionArea" parent="." instance=ExtResource("2_6b6ij")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionArea"]
+position = Vector2(1.5, 0.5)
+shape = SubResource("RectangleShape2D_b3xv3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.5, 0.5)
+shape = SubResource("RectangleShape2D_lchu8")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu540wtt3nj1r"]
+
+[ext_resource type="Script" uid="uid://eddkai104bcg" path="res://Scripts/Items/ally_slashDamage.gd" id="1_1ljhd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euyk3"]
+size = Vector2(11, 17.5)
+
+[node name="AllyArrow" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_1ljhd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Sword" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sword"]
+position = Vector2(-0.25, 1.5)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_euyk3")

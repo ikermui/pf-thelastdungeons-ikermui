@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1we4xw3pt3v1"]
+
+[ext_resource type="Theme" uid="uid://dpw51owdlkggh" path="res://Themes/button_theme.tres" id="1_3agam"]
+[ext_resource type="Script" uid="uid://brbvgh562admj" path="res://Scripts/UI/pause_game.gd" id="2_4w6vr"]
+[ext_resource type="Texture2D" uid="uid://b2pxmnlr472fp" path="res://Resources/UI/GUIInventoryOptions.png" id="2_rqys5"]
+[ext_resource type="Theme" uid="uid://c8acsa1nele17" path="res://Themes/button_pause.tres" id="3_4w6vr"]
+[ext_resource type="Texture2D" uid="uid://bo2m28uk5i4fg" path="res://Resources/UI/FondoBlack.png" id="3_cuma6"]
+
+[node name="pause_game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3agam")
+script = ExtResource("2_4w6vr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.47451)
+scale = Vector2(1, 1.33333)
+texture = ExtResource("3_cuma6")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(129, 96)
+scale = Vector2(2.22909, 1.72917)
+texture = ExtResource("2_rqys5")
+hframes = 3
+frame = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 69.0
+offset_right = 223.0
+offset_bottom = 191.0
+scale = Vector2(0.5, 0.5)
+
+[node name="B_Resume" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_4w6vr")
+text = "Continuar"
+
+[node name="B_Save" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_4w6vr")
+text = "Guardar Datos"
+
+[node name="B_Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_4w6vr")
+text = "Guardar y Salir"
+
+[connection signal="pressed" from="VBoxContainer/B_Resume" to="." method="resume_game"]
+[connection signal="pressed" from="VBoxContainer/B_Save" to="." method="save_game"]
+[connection signal="pressed" from="VBoxContainer/B_Exit" to="." method="exit"]

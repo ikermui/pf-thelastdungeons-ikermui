@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bogifrm80dtmj"]
+
+[ext_resource type="Texture2D" uid="uid://cg13cid68kfnt" path="res://Resources/Other/runes.png" id="1_n3xnf"]
+[ext_resource type="Script" uid="uid://bj5wfyvedxr8u" path="res://Scripts/Items/dark_rune.gd" id="1_rh8db"]
+[ext_resource type="Texture2D" uid="uid://lg6lgb7vs2xr" path="res://Resources/Other/LightTest.png" id="3_6qb1e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rh8db"]
+
+[node name="DarkRune" type="Area2D"]
+script = ExtResource("1_rh8db")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_n3xnf")
+hframes = 16
+vframes = 11
+frame = 40
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rh8db")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.75
+texture = ExtResource("3_6qb1e")
+texture_scale = 2.5
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

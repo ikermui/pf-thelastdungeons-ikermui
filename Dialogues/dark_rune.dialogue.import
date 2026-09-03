@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dy0dwwnnanvsp"
+path="res://.godot/imported/dark_rune.dialogue-d34fb175d1fb8bc157e54a10595c0ae1.tres"
+
+[deps]
+
+source_file="res://Dialogues/dark_rune.dialogue"
+dest_files=["res://.godot/imported/dark_rune.dialogue-d34fb175d1fb8bc157e54a10595c0ae1.tres"]
+
+[params]
+
+defaults=true

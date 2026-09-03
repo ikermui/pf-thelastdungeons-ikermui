@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bnrhmosbj0wqm"
+path="res://.godot/imported/cartelTerrenoToxico.dialogue-d5e48239f8a97b017f5f2c9f426be7e4.tres"
+
+[deps]
+
+source_file="res://Dialogues/cartelTerrenoToxico.dialogue"
+dest_files=["res://.godot/imported/cartelTerrenoToxico.dialogue-d5e48239f8a97b017f5f2c9f426be7e4.tres"]
+
+[params]
+
+defaults=true

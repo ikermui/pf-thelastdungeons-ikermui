@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://begwu5uv185th"]
+
+[ext_resource type="PackedScene" uid="uid://b1ljuyudon4ed" path="res://Scenes/Tilemap/tm_castillo.tscn" id="1_8u28d"]
+[ext_resource type="Script" uid="uid://didvdm07rjne" path="res://Scripts/Rooms/castillo.gd" id="1_otmbq"]
+[ext_resource type="PackedScene" uid="uid://d1aw725skuh60" path="res://Scenes/Player/player.tscn" id="2_4bj4r"]
+[ext_resource type="PackedScene" uid="uid://dnc2nquddum3s" path="res://Scenes/Importants/teleport_player.tscn" id="3_4bj4r"]
+[ext_resource type="PackedScene" uid="uid://bxukx3qifl07v" path="res://Scenes/Importants/change_room.tscn" id="4_xokyd"]
+[ext_resource type="PackedScene" uid="uid://bwykoehss0rh2" path="res://Scenes/Items/velmora_rune.tscn" id="5_1vxmm"]
+[ext_resource type="PackedScene" uid="uid://cp5qxj5jytup7" path="res://Scenes/Items/dark_door.tscn" id="7_olm6f"]
+
+[node name="castillo" type="Node2D"]
+script = ExtResource("1_otmbq")
+
+[node name="tm_castillo" parent="." instance=ExtResource("1_8u28d")]
+
+[node name="Player" parent="." instance=ExtResource("2_4bj4r")]
+position = Vector2(127, 156)
+
+[node name="teleport_player" parent="." instance=ExtResource("3_4bj4r")]
+position = Vector2(112, -268)
+newPosition = Vector2(130, 78)
+
+[node name="teleport_player2" parent="." instance=ExtResource("3_4bj4r")]
+position = Vector2(128, 12)
+scale = Vector2(3, 3)
+newPosition = Vector2(110, -314)
+
+[node name="ChangeRoom" parent="." instance=ExtResource("4_xokyd")]
+position = Vector2(128, 194)
+nextScene = "res://Scenes/Rooms/campo_velmora.tscn"
+initialPosition = Vector2(1452, 429)
+
+[node name="velmoraRune" parent="." instance=ExtResource("5_1vxmm")]
+position = Vector2(113, -411)
+
+[node name="DarkDoor" parent="." instance=ExtResource("7_olm6f")]
+position = Vector2(129, 17)
+scale = Vector2(1.6, 1.4)

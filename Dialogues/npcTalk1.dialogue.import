@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://cmra3gls3c3rj"
+path="res://.godot/imported/npcTalk1.dialogue-add650eaa4732b4ba50db0ad2cad0add.tres"
+
+[deps]
+
+source_file="res://Dialogues/npcTalk1.dialogue"
+dest_files=["res://.godot/imported/npcTalk1.dialogue-add650eaa4732b4ba50db0ad2cad0add.tres"]
+
+[params]
+
+defaults=true

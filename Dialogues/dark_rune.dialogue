@@ -1,0 +1,14 @@
+~ start
+¡Has conseguido la Runa Oscura!
+if DataNodeVariables.check_lake()
+	if DataNodeVariables.check_desert()
+		Almyra: El poder oscuro del castillo se esta disipando, Tharn.
+		Almyra: Es hora de terminar con esto.
+	else
+		Almyra: Ya estas a nada de terminar la aventura, ve a por la ultima runa, que se encuentra en el templo del desierto, al suroeste de Velmora
+else
+	if DataNodeVariables.check_desert()
+		Almyra: Ya estas a nada de terminar la aventura, ve a por la ultima runa, que se encuentra en el templo del lago, al sureste de Velmora
+	else
+		Almyra: Ya solo te faltan 2 runas mas, te recomiendo ir al templo del lago a por tu segunda runa, al sureste de Velmora.	
+=> END

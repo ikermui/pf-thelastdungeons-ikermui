@@ -1,0 +1,125 @@
+[gd_scene load_steps=10 format=3 uid="uid://d13totr5a1xod"]
+
+[ext_resource type="Texture2D" uid="uid://bfrm0fvwadsw4" path="res://Resources/UI/menubackground.jpg" id="1_aal8i"]
+[ext_resource type="Script" uid="uid://s11kgo63327e" path="res://Scripts/Menu/menu_points.gd" id="1_o1a5q"]
+[ext_resource type="FontFile" uid="uid://btktu5slgjifh" path="res://Resources/Fonts/zeldadxt.ttf" id="2_o1a5q"]
+[ext_resource type="Theme" uid="uid://dpw51owdlkggh" path="res://Themes/button_theme.tres" id="4_sma11"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sma11"]
+font = ExtResource("2_o1a5q")
+font_size = 18
+font_color = Color(0, 0.615686, 0.329412, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_aal8i"]
+font_size = 8
+font_color = Color(1, 0.776471, 0, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_o1a5q"]
+font_size = 8
+font_color = Color(0.752941, 0.752941, 0.752941, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6oepe"]
+font_size = 8
+font_color = Color(0.803922, 0.498039, 0.196078, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rqpp0"]
+font_size = 8
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[node name="menu_points" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o1a5q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+scale = Vector2(0.32, 0.295385)
+texture = ExtResource("1_aal8i")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 19.0
+offset_right = 250.0
+offset_bottom = 45.0
+text = "TABLA DE PUNTOS"
+label_settings = SubResource("LabelSettings_sma11")
+
+[node name="VScrollBar" type="VScrollBar" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 42.0
+offset_right = 220.0
+offset_bottom = 143.0
+
+[node name="Label" type="Label" parent="VScrollBar"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 12.0
+offset_right = 130.0
+offset_bottom = 35.0
+text = "1 - "
+label_settings = SubResource("LabelSettings_aal8i")
+
+[node name="Label2" type="Label" parent="VScrollBar"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 30.0
+offset_right = 130.0
+offset_bottom = 53.0
+text = "2 - "
+label_settings = SubResource("LabelSettings_o1a5q")
+
+[node name="Label3" type="Label" parent="VScrollBar"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 47.0
+offset_right = 130.0
+offset_bottom = 70.0
+text = "3 - "
+label_settings = SubResource("LabelSettings_6oepe")
+
+[node name="Label4" type="Label" parent="VScrollBar"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 63.0
+offset_right = 130.0
+offset_bottom = 86.0
+text = "4 - "
+label_settings = SubResource("LabelSettings_rqpp0")
+
+[node name="Label5" type="Label" parent="VScrollBar"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 80.0
+offset_right = 130.0
+offset_bottom = 103.0
+text = "5 - "
+label_settings = SubResource("LabelSettings_rqpp0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 150.0
+offset_right = 194.0
+offset_bottom = 181.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_sma11")
+text = "VOLVER"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="volver"]

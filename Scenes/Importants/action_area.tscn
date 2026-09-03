@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://crudiqlm7dsv0"]
+
+[ext_resource type="Script" uid="uid://h8xklum8dfk7" path="res://Scripts/Importants/actionable.gd" id="1_vnoac"]
+
+[node name="ActionArea" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_vnoac")

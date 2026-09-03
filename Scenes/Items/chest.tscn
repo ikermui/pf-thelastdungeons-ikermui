@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6ltla3oebx8o"]
+
+[ext_resource type="Script" uid="uid://et7qf5sf6v8p" path="res://Scripts/Items/chest.gd" id="1_7becl"]
+[ext_resource type="Texture2D" uid="uid://b55fm8q0auf7v" path="res://Resources/Items/World/Chest.png" id="1_qwb25"]
+[ext_resource type="PackedScene" uid="uid://crudiqlm7dsv0" path="res://Scenes/Importants/action_area.tscn" id="2_bti28"]
+[ext_resource type="Texture2D" uid="uid://baxrkixjbxqtw" path="res://Resources/Items/Heart.png" id="4_k1c5p"]
+[ext_resource type="FontFile" uid="uid://btktu5slgjifh" path="res://Resources/Fonts/zeldadxt.ttf" id="5_ouhxx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1c5p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7becl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bti28"]
+size = Vector2(15, 11)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w1qw1"]
+font = ExtResource("5_ouhxx")
+font_size = 8
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Chest" type="Node2D"]
+script = ExtResource("1_7becl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qwb25")
+
+[node name="ActionArea" parent="." instance=ExtResource("2_bti28")]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionArea"]
+scale = Vector2(0.9, 0.6)
+shape = SubResource("RectangleShape2D_k1c5p")
+debug_color = Color(0.58176, 0.551295, 0, 0.42)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -4)
+scale = Vector2(0.8, 0.4)
+shape = SubResource("RectangleShape2D_7becl")
+
+[node name="NearableItem" type="Area2D" parent="."]
+collision_layer = 512
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NearableItem"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_bti28")
+
+[node name="Item" type="Sprite2D" parent="."]
+visible = false
+z_index = 15
+position = Vector2(0, -17)
+texture = ExtResource("4_k1c5p")
+
+[node name="Quantity" type="Label" parent="."]
+visible = false
+z_index = 15
+offset_left = 1.0
+offset_top = -18.0
+offset_right = 42.0
+offset_bottom = 4.0
+text = "x20"
+label_settings = SubResource("LabelSettings_w1qw1")

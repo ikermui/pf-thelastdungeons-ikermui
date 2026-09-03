@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=3 uid="uid://b0qpftwsb7lt8"]
+
+[ext_resource type="Texture2D" uid="uid://b77poqp0jkn1n" path="res://Resources/Items/Bomb.png" id="1_khu65"]
+[ext_resource type="Script" uid="uid://b6aj1dkfsqduc" path="res://Scripts/Items/ally_bomb.gd" id="1_r8ayk"]
+[ext_resource type="PackedScene" uid="uid://lr4jpwid54ix" path="res://Scenes/Particles/particula_explosion.tscn" id="3_qpq6w"]
+
+[sub_resource type="Animation" id="Animation_tgl2w"]
+resource_name = "Idle"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.7, 1, 1.2, 1.4, 1.6, 1.8, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.943289, 0.222374, 0.206875, 1), Color(1, 1, 1, 1), Color(0.945098, 0.223529, 0.207843, 1), Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_r8ayk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qpq6w"]
+_data = {
+&"Idle": SubResource("Animation_tgl2w"),
+&"RESET": SubResource("Animation_r8ayk")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_khu65"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tgl2w"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_r8ayk"]
+states/Idle/node = SubResource("AnimationNodeAnimation_khu65")
+states/Idle/position = Vector2(582, 111)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_tgl2w")]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1iabq"]
+radius = 40.0
+
+[node name="AllyBomb" type="Node2D"]
+z_index = 3
+script = ExtResource("1_r8ayk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_khu65")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qpq6w")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_r8ayk")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="ExplosionArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionArea"]
+shape = SubResource("CircleShape2D_1iabq")
+debug_color = Color(0.643817, 0.656668, 0.665167, 0.42)
+
+[node name="ParticulaExplosion" parent="." instance=ExtResource("3_qpq6w")]

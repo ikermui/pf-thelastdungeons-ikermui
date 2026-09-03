@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://jgx6ldnvs1fb"]
+
+[ext_resource type="Texture2D" uid="uid://cg13cid68kfnt" path="res://Resources/Other/runes.png" id="1_5jqes"]
+[ext_resource type="Script" uid="uid://chvyblw6ax1nr" path="res://Scripts/Items/desert_rune.gd" id="1_i0eki"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i0eki"]
+
+[node name="DesertRune" type="Area2D"]
+script = ExtResource("1_i0eki")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_5jqes")
+hframes = 16
+vframes = 11
+frame = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_i0eki")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

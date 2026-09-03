@@ -1,0 +1,202 @@
+[gd_scene load_steps=14 format=3 uid="uid://l2ufbpleqjxa"]
+
+[ext_resource type="Script" uid="uid://4fuducp7wuln" path="res://Scripts/Rooms/lost_land.gd" id="1_5e0ev"]
+[ext_resource type="PackedScene" uid="uid://crans1d84yf8q" path="res://Scenes/Tilemap/tm_lost_land.tscn" id="1_f2qnu"]
+[ext_resource type="PackedScene" uid="uid://d1aw725skuh60" path="res://Scenes/Player/player.tscn" id="2_tyo2u"]
+[ext_resource type="PackedScene" uid="uid://bfyl3vghgr1b5" path="res://Scenes/Items/tp_floor.tscn" id="3_70yxt"]
+[ext_resource type="PackedScene" uid="uid://dnc2nquddum3s" path="res://Scenes/Importants/teleport_player.tscn" id="4_otmqn"]
+[ext_resource type="PackedScene" uid="uid://bxukx3qifl07v" path="res://Scenes/Importants/change_room.tscn" id="5_otmqn"]
+[ext_resource type="PackedScene" uid="uid://ddlk4r2ef58ug" path="res://Scenes/Items/hookeable.tscn" id="6_iq0g8"]
+[ext_resource type="PackedScene" uid="uid://c6ltla3oebx8o" path="res://Scenes/Items/chest.tscn" id="7_38klj"]
+[ext_resource type="PackedScene" uid="uid://b45ufs7ixxrti" path="res://Scenes/NPCs/healing_npc.tscn" id="8_38klj"]
+[ext_resource type="PackedScene" uid="uid://42ttm3g17kwc" path="res://Scenes/Items/recolectable_item.tscn" id="9_8fhdt"]
+[ext_resource type="PackedScene" uid="uid://dtmlbklq2h3od" path="res://Scenes/Items/rock_wall.tscn" id="10_00p1y"]
+[ext_resource type="PackedScene" uid="uid://bvfnmyvfjgoyq" path="res://Scenes/Enemies/enemy_skeleton.tscn" id="11_rtcnw"]
+[ext_resource type="PackedScene" uid="uid://bfnxhlvyvltis" path="res://Scenes/NPCs/sign_npc.tscn" id="13_5ptb7"]
+
+[node name="lost_land" type="Node2D"]
+script = ExtResource("1_5e0ev")
+
+[node name="tm_lost_land" parent="." instance=ExtResource("1_f2qnu")]
+
+[node name="Player" parent="." instance=ExtResource("2_tyo2u")]
+position = Vector2(184, 133)
+
+[node name="tp_floor" parent="." instance=ExtResource("3_70yxt")]
+z_index = 3
+position = Vector2(-817, -536)
+
+[node name="tp_floor2" parent="." instance=ExtResource("3_70yxt")]
+z_index = 3
+position = Vector2(1126, -362)
+
+[node name="teleport_player" parent="." instance=ExtResource("4_otmqn")]
+position = Vector2(-817, -536)
+newPosition = Vector2(1100, -364)
+
+[node name="teleport_player2" parent="." instance=ExtResource("4_otmqn")]
+position = Vector2(1126, -362)
+newPosition = Vector2(-790, -538)
+
+[node name="ChangeRoom" parent="." instance=ExtResource("5_otmqn")]
+position = Vector2(-552, -545)
+scale = Vector2(0.8, 0.85)
+nextScene = "res://Scenes/Rooms/dark_temple.tscn"
+initialPosition = Vector2(215, 171)
+
+[node name="ChangeRoom2" parent="." instance=ExtResource("5_otmqn")]
+position = Vector2(184, 184)
+nextScene = "res://Scenes/Rooms/cueva_velmora_p0.tscn"
+initialPosition = Vector2(-376, 348)
+
+[node name="ChangeRoom3" parent="." instance=ExtResource("5_otmqn")]
+position = Vector2(-648, 439)
+nextScene = "res://Scenes/Rooms/cueva_velmora_p0.tscn"
+initialPosition = Vector2(-905, 406)
+
+[node name="Hookeable" parent="." instance=ExtResource("6_iq0g8")]
+z_index = 3
+position = Vector2(298, -771)
+
+[node name="Hookeable2" parent="." instance=ExtResource("6_iq0g8")]
+z_index = 3
+position = Vector2(459, -664)
+
+[node name="Hookeable3" parent="." instance=ExtResource("6_iq0g8")]
+z_index = 2
+position = Vector2(389, -637)
+
+[node name="Hookeable4" parent="." instance=ExtResource("6_iq0g8")]
+position = Vector2(-388, -546)
+
+[node name="Hookeable5" parent="." instance=ExtResource("6_iq0g8")]
+z_index = 3
+position = Vector2(-459, -570)
+
+[node name="Hookeable6" parent="." instance=ExtResource("6_iq0g8")]
+position = Vector2(-277, -657)
+
+[node name="Hookeable7" parent="." instance=ExtResource("6_iq0g8")]
+z_index = 3
+position = Vector2(-364, -681)
+
+[node name="Chest" parent="." instance=ExtResource("7_38klj")]
+z_index = 4
+position = Vector2(212, -800)
+item_value = 35
+
+[node name="Chest2" parent="." instance=ExtResource("7_38klj")]
+z_index = 5
+position = Vector2(806, -689)
+item_type = 4
+item_value = 5
+
+[node name="Chest4" parent="." instance=ExtResource("7_38klj")]
+z_index = 4
+position = Vector2(-769, 28)
+item_value = 20
+
+[node name="Chest5" parent="." instance=ExtResource("7_38klj")]
+z_index = 3
+position = Vector2(-282, -796)
+item_type = 3
+item_value = 3
+
+[node name="Healing_Npc" parent="." instance=ExtResource("8_38klj")]
+z_index = 4
+position = Vector2(533, -421)
+
+[node name="RecolectableItem" parent="." instance=ExtResource("9_8fhdt")]
+z_index = 4
+position = Vector2(-120, -731)
+iditem = 4
+value = 3
+
+[node name="RecolectableItem2" parent="." instance=ExtResource("9_8fhdt")]
+z_index = 4
+position = Vector2(-160, -332)
+iditem = 1
+value = 3
+
+[node name="RecolectableItem3" parent="." instance=ExtResource("9_8fhdt")]
+position = Vector2(39, 139)
+iditem = 5
+value = 1
+
+[node name="RecolectableItem4" parent="." instance=ExtResource("9_8fhdt")]
+position = Vector2(295, -277)
+iditem = 1
+value = 10
+
+[node name="RecolectableItem5" parent="." instance=ExtResource("9_8fhdt")]
+position = Vector2(874, -243)
+iditem = 4
+value = 2
+
+[node name="RecolectableItem6" parent="." instance=ExtResource("9_8fhdt")]
+position = Vector2(91, -692)
+iditem = 4
+value = 2
+
+[node name="RecolectableItem7" parent="." instance=ExtResource("9_8fhdt")]
+position = Vector2(-379, 99)
+iditem = 2
+value = 10
+
+[node name="RecolectableItem8" parent="." instance=ExtResource("9_8fhdt")]
+z_index = 3
+position = Vector2(-807, 397)
+iditem = 5
+value = 1
+
+[node name="RecolectableItem9" parent="." instance=ExtResource("9_8fhdt")]
+position = Vector2(-732, -127)
+iditem = 3
+value = 2
+
+[node name="RockWall" parent="." instance=ExtResource("10_00p1y")]
+z_index = 3
+position = Vector2(-648, 438)
+rotation = 3.14159
+
+[node name="Enemy_Skeleton" parent="." instance=ExtResource("11_rtcnw")]
+position = Vector2(-663, 3)
+scale = Vector2(1.4, 1.4)
+enemyHealth = 7
+
+[node name="Enemy_Skeleton2" parent="." instance=ExtResource("11_rtcnw")]
+position = Vector2(-158, -134)
+enemyHealth = 4
+
+[node name="Enemy_Skeleton3" parent="." instance=ExtResource("11_rtcnw")]
+position = Vector2(233, -261)
+scale = Vector2(1.25, 1.25)
+enemyHealth = 5
+
+[node name="Enemy_Skeleton4" parent="." instance=ExtResource("11_rtcnw")]
+position = Vector2(924, -226)
+
+[node name="Enemy_Skeleton5" parent="." instance=ExtResource("11_rtcnw")]
+position = Vector2(652, -653)
+scale = Vector2(1.2, 1.2)
+enemyHealth = 5
+
+[node name="Enemy_Skeleton6" parent="." instance=ExtResource("11_rtcnw")]
+position = Vector2(210, -633)
+enemyHealth = 4
+
+[node name="Enemy_Skeleton7" parent="." instance=ExtResource("11_rtcnw")]
+position = Vector2(-470, -389)
+scale = Vector2(1.1, 1.1)
+enemyHealth = 4
+
+[node name="Enemy_Skeleton8" parent="." instance=ExtResource("11_rtcnw")]
+position = Vector2(-239, -698)
+
+[node name="Enemy_Skeleton9" parent="." instance=ExtResource("11_rtcnw")]
+position = Vector2(631, -288)
+
+[node name="sign_npc" parent="." instance=ExtResource("13_5ptb7")]
+z_index = 3
+position = Vector2(127, 50)
+dialogue = "res://Dialogues/cartelTerrenoToxico.dialogue"

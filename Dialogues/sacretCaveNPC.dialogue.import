@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dg8asuyfjaohy"
+path="res://.godot/imported/sacretCaveNPC.dialogue-9902bd4d7e0aeae5ea2b0827e83cd95b.tres"
+
+[deps]
+
+source_file="res://Dialogues/sacretCaveNPC.dialogue"
+dest_files=["res://.godot/imported/sacretCaveNPC.dialogue-9902bd4d7e0aeae5ea2b0827e83cd95b.tres"]
+
+[params]
+
+defaults=true

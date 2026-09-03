@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnc2nquddum3s"]
+
+[ext_resource type="Script" uid="uid://dknrro1imy1ey" path="res://Scripts/Importants/teleport_player.gd" id="1_mrec4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utj32"]
+
+[node name="teleport_player" type="Area2D"]
+z_index = 3
+script = ExtResource("1_mrec4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_utj32")
+debug_color = Color(0, 0.40664, 0.718845, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

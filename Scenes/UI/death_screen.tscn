@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://by5n8rdci8ejr"]
+
+[ext_resource type="Texture2D" uid="uid://bo2m28uk5i4fg" path="res://Resources/UI/FondoBlack.png" id="1_30dcm"]
+[ext_resource type="Script" uid="uid://dljcaqii80k88" path="res://Scripts/UI/deathScreen.gd" id="1_65cmr"]
+[ext_resource type="FontFile" uid="uid://btktu5slgjifh" path="res://Resources/Fonts/zeldadxt.ttf" id="2_68xsb"]
+[ext_resource type="Script" uid="uid://6mn8edn4wn7x" path="res://Scripts/UI/ButtonRetryGO.gd" id="3_68xsb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_65cmr"]
+font = ExtResource("2_68xsb")
+font_size = 42
+font_color = Color(0.807978, 0.0280023, 0.1327, 1)
+outline_size = 8
+outline_color = Color(0.296803, 0.0890303, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gjw0p"]
+font = ExtResource("2_68xsb")
+font_size = 42
+font_color = Color(0.8334, 0.862575, 0, 1)
+outline_size = 8
+outline_color = Color(0.215686, 0.305882, 0.137255, 1)
+
+[node name="DeathScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_65cmr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 1.33333)
+texture = ExtResource("1_30dcm")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 29.0
+offset_right = 514.0
+offset_bottom = 85.0
+scale = Vector2(0.45, 0.45)
+text = "FIN DE LA PARTIDA"
+label_settings = SubResource("LabelSettings_65cmr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 102.0
+offset_right = 183.0
+offset_bottom = 133.0
+script = ExtResource("3_68xsb")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 258.0
+offset_bottom = 62.0
+scale = Vector2(0.35, 0.35)
+text = "REINTENTAR"
+label_settings = SubResource("LabelSettings_gjw0p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 141.0
+offset_right = 183.0
+offset_bottom = 172.0
+text = "Salir al Menú"
+
+[connection signal="pressed" from="Button" to="Button" method="_button_pressed"]

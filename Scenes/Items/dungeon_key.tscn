@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://2qlhgfm2c2js"]
+
+[ext_resource type="Texture2D" uid="uid://b1ldkdqtwtfgy" path="res://Resources/tiles/dungeonkey/key.png" id="1_4ccel"]
+[ext_resource type="Script" uid="uid://db7cjwlttw65w" path="res://Scripts/Items/dungeon_key.gd" id="1_p5pkx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p5pkx"]
+radius = 11.0454
+
+[node name="dungeon_key" type="Area2D"]
+collision_layer = 513
+script = ExtResource("1_p5pkx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("1_4ccel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_p5pkx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,10 @@
+Feel free to edit the tiles for use in your games
+
+Technical info:
+Tile Size: 16x16 (except the torch fire which is 20x29 to save space)
+Normal Map: OpenGL
+Designed to be used with multiple tilemap layers
+
+Remember to credit me (Rowan Luff) for this asset
+
+Thanks for downloading :)

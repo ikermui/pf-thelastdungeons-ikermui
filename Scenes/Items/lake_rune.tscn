@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b21g5rsuycqfc"]
+
+[ext_resource type="Texture2D" uid="uid://cg13cid68kfnt" path="res://Resources/Other/runes.png" id="1_5fmjh"]
+[ext_resource type="Script" uid="uid://dq8ebxv7n5gmh" path="res://Scripts/Items/lake_rune.gd" id="1_gmcqq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gmcqq"]
+radius = 10.0499
+
+[node name="LakeRune" type="Area2D"]
+script = ExtResource("1_gmcqq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_5fmjh")
+hframes = 16
+vframes = 11
+frame = 75
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gmcqq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

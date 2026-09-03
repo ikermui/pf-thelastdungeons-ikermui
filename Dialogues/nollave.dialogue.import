@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://buvndasy2fwqw"
+path="res://.godot/imported/nollave.dialogue-031dca1b830b9c18db135cb8f13b57b3.tres"
+
+[deps]
+
+source_file="res://Dialogues/nollave.dialogue"
+dest_files=["res://.godot/imported/nollave.dialogue-031dca1b830b9c18db135cb8f13b57b3.tres"]
+
+[params]
+
+defaults=true

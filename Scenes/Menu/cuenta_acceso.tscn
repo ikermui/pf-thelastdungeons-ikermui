@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsndjcsqhv5ed"]
+
+[ext_resource type="Script" uid="uid://dfpmbsu0xyu3h" path="res://Scripts/Menu/cuenta_acceso.gd" id="1_i3gvr"]
+[ext_resource type="Texture2D" uid="uid://bfrm0fvwadsw4" path="res://Resources/UI/menubackground.jpg" id="2_fnhib"]
+[ext_resource type="FontFile" uid="uid://btktu5slgjifh" path="res://Resources/Fonts/zeldadxt.ttf" id="3_7mesu"]
+[ext_resource type="Theme" uid="uid://dpw51owdlkggh" path="res://Themes/button_theme.tres" id="4_fnhib"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nwmae"]
+font = ExtResource("3_7mesu")
+font_size = 18
+font_color = Color(0, 0.615686, 0.329412, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="cuenta_acceso" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i3gvr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+scale = Vector2(0.32, 0.295385)
+texture = ExtResource("2_fnhib")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 21.0
+offset_right = 234.0
+offset_bottom = 47.0
+text = "CUENTA"
+label_settings = SubResource("LabelSettings_nwmae")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 70.0
+offset_right = 179.0
+offset_bottom = 149.0
+
+[node name="B_Login" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_fnhib")
+text = "Iniciar Sesión"
+
+[node name="B_Signup" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_fnhib")
+text = "Registrarte"
+
+[node name="B_Volver" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_fnhib")
+text = "Volver"
+
+[connection signal="pressed" from="VBoxContainer/B_Login" to="." method="login"]
+[connection signal="pressed" from="VBoxContainer/B_Signup" to="." method="signup"]
+[connection signal="pressed" from="VBoxContainer/B_Volver" to="." method="volver"]

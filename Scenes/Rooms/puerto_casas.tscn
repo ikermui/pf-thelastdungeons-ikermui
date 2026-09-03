@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://wlftni7w0w0x"]
+
+[ext_resource type="PackedScene" uid="uid://ckgky67abmx7i" path="res://Scenes/Tilemap/tm_puerto_casas.tscn" id="1_1vquf"]
+[ext_resource type="PackedScene" uid="uid://b45ufs7ixxrti" path="res://Scenes/NPCs/healing_npc.tscn" id="2_54esr"]
+[ext_resource type="PackedScene" uid="uid://d1aw725skuh60" path="res://Scenes/Player/player.tscn" id="2_d05o7"]
+[ext_resource type="PackedScene" uid="uid://bc4cyaeeuy8uj" path="res://Scenes/NPCs/shop_npc.tscn" id="3_5gr5a"]
+[ext_resource type="PackedScene" uid="uid://b74rn0s4sqcvr" path="res://Scenes/NPCs/npc_talk_1.tscn" id="4_5gr5a"]
+[ext_resource type="PackedScene" uid="uid://c6ltla3oebx8o" path="res://Scenes/Items/chest.tscn" id="5_348o7"]
+[ext_resource type="PackedScene" uid="uid://bxukx3qifl07v" path="res://Scenes/Importants/change_room.tscn" id="6_b68f3"]
+
+[node name="puerto_casas" type="Node2D"]
+
+[node name="tm_puerto_casas" parent="." instance=ExtResource("1_1vquf")]
+
+[node name="Player" parent="." instance=ExtResource("2_d05o7")]
+position = Vector2(168, 637)
+
+[node name="Healing_Npc" parent="." instance=ExtResource("2_54esr")]
+position = Vector2(135, 67)
+
+[node name="Shop_Npc" parent="." instance=ExtResource("3_5gr5a")]
+position = Vector2(-552, 87)
+
+[node name="Npc_Talk1" parent="." instance=ExtResource("4_5gr5a")]
+position = Vector2(240, 576)
+
+[node name="Chest" parent="." instance=ExtResource("5_348o7")]
+position = Vector2(-511, 497)
+item_type = 3
+item_value = 5
+
+[node name="ChangeRoom" parent="." instance=ExtResource("6_b68f3")]
+position = Vector2(-552, 226)
+nextScene = "res://Scenes/Rooms/pueblo_puerto.tscn"
+initialPosition = Vector2(282, -52)
+
+[node name="ChangeRoom2" parent="." instance=ExtResource("6_b68f3")]
+position = Vector2(-520, 691)
+nextScene = "res://Scenes/Rooms/pueblo_puerto.tscn"
+initialPosition = Vector2(-181, 74)
+
+[node name="ChangeRoom3" parent="." instance=ExtResource("6_b68f3")]
+position = Vector2(136, 211)
+nextScene = "res://Scenes/Rooms/pueblo_puerto.tscn"
+initialPosition = Vector2(-213, -152)
+
+[node name="ChangeRoom4" parent="." instance=ExtResource("6_b68f3")]
+position = Vector2(168, 677)
+nextScene = "res://Scenes/Rooms/pueblo_puerto.tscn"
+initialPosition = Vector2(-70, -116)

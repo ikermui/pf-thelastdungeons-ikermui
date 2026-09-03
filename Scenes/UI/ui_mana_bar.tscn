@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://exkm2jg8bm6"]
+
+[ext_resource type="Texture2D" uid="uid://dcr2a2hqk514r" path="res://Resources/UI/ManaBarEmpty.png" id="1_ayi7h"]
+[ext_resource type="Texture2D" uid="uid://c1ylgmoc5nsde" path="res://Resources/UI/ManaBarFull.png" id="2_cdp8g"]
+
+[node name="UIManaBar" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 16.0
+offset_bottom = 48.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 48.0
+value = 100.0
+fill_mode = 3
+stretch_margin_bottom = 20
+texture_under = ExtResource("1_ayi7h")
+texture_progress = ExtResource("2_cdp8g")

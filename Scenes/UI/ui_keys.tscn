@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://domc1d4a0ilau"]
+
+[ext_resource type="Texture2D" uid="uid://b1ldkdqtwtfgy" path="res://Resources/tiles/dungeonkey/key.png" id="1_ca6jn"]
+[ext_resource type="FontFile" uid="uid://btktu5slgjifh" path="res://Resources/Fonts/zeldadxt.ttf" id="2_5kjje"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1c1u1"]
+font = ExtResource("2_5kjje")
+font_size = 9
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ui_keys" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_right = -245.0
+offset_bottom = -183.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 5)
+rotation = 0.0349066
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("1_ca6jn")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 2.0
+offset_right = 47.0
+offset_bottom = 25.0
+text = "0"
+label_settings = SubResource("LabelSettings_1c1u1")

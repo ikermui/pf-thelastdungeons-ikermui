@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=3 uid="uid://c401bxhgo5evr"]
+
+[ext_resource type="Script" uid="uid://ceqfklxd1a0gr" path="res://Scripts/Menu/cuenta_datos.gd" id="1_fm2ar"]
+[ext_resource type="Texture2D" uid="uid://bfrm0fvwadsw4" path="res://Resources/UI/menubackground.jpg" id="1_tmif6"]
+[ext_resource type="FontFile" uid="uid://btktu5slgjifh" path="res://Resources/Fonts/zeldadxt.ttf" id="2_fm2ar"]
+[ext_resource type="Theme" uid="uid://dpw51owdlkggh" path="res://Themes/button_theme.tres" id="4_ewxxl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ewxxl"]
+font = ExtResource("2_fm2ar")
+font_size = 18
+font_color = Color(0, 0.615686, 0.329412, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fm2ar"]
+font_size = 10
+font_color = Color(1, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_166c3"]
+font_size = 10
+font_color = Color(0, 1, 0, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="cuenta_datos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fm2ar")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+scale = Vector2(0.32, 0.295385)
+texture = ExtResource("1_tmif6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 21.0
+offset_right = 234.0
+offset_bottom = 47.0
+text = "CUENTA"
+label_settings = SubResource("LabelSettings_ewxxl")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 62.0
+offset_right = 199.0
+offset_bottom = 198.0
+scale = Vector2(0.8, 0.8)
+
+[node name="B_Guardar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_ewxxl")
+text = "Guardar Datos"
+
+[node name="B_Cargar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_ewxxl")
+text = "Cargar Datos"
+
+[node name="B_Cerrar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_ewxxl")
+text = "Cerrar Sesión"
+
+[node name="B_Volver" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_ewxxl")
+text = "Volver"
+
+[node name="MensajeError" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 41.0
+offset_right = 207.0
+offset_bottom = 64.0
+text = "No se pudieron guardar los datos"
+label_settings = SubResource("LabelSettings_fm2ar")
+horizontal_alignment = 1
+
+[node name="MensajeExito" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 49.0
+offset_top = 40.0
+offset_right = 206.0
+offset_bottom = 63.0
+text = "Datos guardados correctamente"
+label_settings = SubResource("LabelSettings_166c3")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/B_Guardar" to="." method="guardar"]
+[connection signal="pressed" from="VBoxContainer/B_Cargar" to="." method="cargar"]
+[connection signal="pressed" from="VBoxContainer/B_Cerrar" to="." method="cerrar"]
+[connection signal="pressed" from="VBoxContainer/B_Volver" to="." method="volver"]

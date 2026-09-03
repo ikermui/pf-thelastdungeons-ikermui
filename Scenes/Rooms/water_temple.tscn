@@ -1,0 +1,237 @@
+[gd_scene load_steps=15 format=3 uid="uid://di5ac0h2ejxwo"]
+
+[ext_resource type="Script" uid="uid://cri0iknatby1n" path="res://Scripts/Rooms/water_temple.gd" id="1_ifabc"]
+[ext_resource type="PackedScene" uid="uid://dldvkkjfdxcsg" path="res://Scenes/Tilemap/tm_water_temple.tscn" id="2_nk2ik"]
+[ext_resource type="PackedScene" uid="uid://d1aw725skuh60" path="res://Scenes/Player/player.tscn" id="3_nsuhp"]
+[ext_resource type="PackedScene" uid="uid://ccsj34bsnvrg1" path="res://Scenes/Items/closed_door.tscn" id="3_x5p0w"]
+[ext_resource type="PackedScene" uid="uid://bxukx3qifl07v" path="res://Scenes/Importants/change_room.tscn" id="5_0bqf2"]
+[ext_resource type="PackedScene" uid="uid://2qlhgfm2c2js" path="res://Scenes/Items/dungeon_key.tscn" id="6_rxk6f"]
+[ext_resource type="PackedScene" uid="uid://c6ltla3oebx8o" path="res://Scenes/Items/chest.tscn" id="7_s20md"]
+[ext_resource type="PackedScene" uid="uid://ddlk4r2ef58ug" path="res://Scenes/Items/hookeable.tscn" id="8_byhrl"]
+[ext_resource type="PackedScene" uid="uid://bfyl3vghgr1b5" path="res://Scenes/Items/tp_floor.tscn" id="9_byhrl"]
+[ext_resource type="PackedScene" uid="uid://dnc2nquddum3s" path="res://Scenes/Importants/teleport_player.tscn" id="10_g8ohh"]
+[ext_resource type="PackedScene" uid="uid://42ttm3g17kwc" path="res://Scenes/Items/recolectable_item.tscn" id="11_rqeos"]
+[ext_resource type="PackedScene" uid="uid://dtmlbklq2h3od" path="res://Scenes/Items/rock_wall.tscn" id="12_gpg44"]
+[ext_resource type="PackedScene" uid="uid://bvfnmyvfjgoyq" path="res://Scenes/Enemies/enemy_skeleton.tscn" id="13_tcjvg"]
+[ext_resource type="PackedScene" uid="uid://b21g5rsuycqfc" path="res://Scenes/Items/lake_rune.tscn" id="14_k3676"]
+
+[node name="water_temple" type="Node2D"]
+script = ExtResource("1_ifabc")
+
+[node name="tm_water_temple" parent="." instance=ExtResource("2_nk2ik")]
+
+[node name="Player" parent="." instance=ExtResource("3_nsuhp")]
+position = Vector2(92, 180)
+
+[node name="closed_door" parent="." instance=ExtResource("3_x5p0w")]
+position = Vector2(96, -625)
+
+[node name="ChangeRoom" parent="." instance=ExtResource("5_0bqf2")]
+position = Vector2(96, 229)
+nextScene = "res://Scenes/Rooms/bosque_velmora.tscn"
+initialPosition = Vector2(168, 1057)
+
+[node name="dungeon_key" parent="." instance=ExtResource("6_rxk6f")]
+position = Vector2(575, -28)
+
+[node name="Chest" parent="." instance=ExtResource("7_s20md")]
+position = Vector2(-168, -365)
+item_type = 4
+item_value = 10
+
+[node name="Hookeable" parent="." instance=ExtResource("8_byhrl")]
+position = Vector2(-168, -279)
+
+[node name="tp_floor" parent="." instance=ExtResource("9_byhrl")]
+position = Vector2(513, -479)
+
+[node name="tp_floor2" parent="." instance=ExtResource("9_byhrl")]
+position = Vector2(-344, 74)
+
+[node name="tp_floor3" parent="." instance=ExtResource("9_byhrl")]
+position = Vector2(839, 143)
+
+[node name="teleport_player" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(-344, 74)
+newPosition = Vector2(513, -447)
+
+[node name="teleport_player2" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(513, -479)
+newPosition = Vector2(-344, 42)
+
+[node name="RecolectableItem" parent="." instance=ExtResource("11_rqeos")]
+position = Vector2(-168, -415)
+iditem = 5
+value = 3
+
+[node name="RockWall" parent="." instance=ExtResource("12_gpg44")]
+position = Vector2(1311, -267)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+
+[node name="Hookeable2" parent="." instance=ExtResource("8_byhrl")]
+position = Vector2(1332, -332)
+
+[node name="tp_floor4" parent="." instance=ExtResource("9_byhrl")]
+position = Vector2(1344, 6)
+
+[node name="teleport_player3" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(1344, 6)
+newPosition = Vector2(812, 141)
+
+[node name="teleport_player4" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(839, 143)
+newPosition = Vector2(1344, -21)
+
+[node name="teleport_player5" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(-1232, 17)
+newPosition = Vector2(-560, -289)
+
+[node name="teleport_player6" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(-559, -323)
+newPosition = Vector2(-1231, -20)
+
+[node name="teleport_player7" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(784, -273)
+newPosition = Vector2(1166, -402)
+
+[node name="teleport_player8" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(1184, -433)
+newPosition = Vector2(801, -229)
+
+[node name="teleport_player9" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(1312, -513)
+newPosition = Vector2(1200, -689)
+
+[node name="teleport_player10" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(1344, -128)
+newPosition = Vector2(1321, -310)
+
+[node name="teleport_player11" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(1404, -809)
+newPosition = Vector2(-1283, 200)
+
+[node name="teleport_player12" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(-1214, 201)
+newPosition = Vector2(1404, -783)
+
+[node name="teleport_player13" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(1200, -652)
+newPosition = Vector2(1313, -481)
+
+[node name="teleport_player14" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(1312, -270)
+newPosition = Vector2(1344, -98)
+
+[node name="tp_floor5" parent="." instance=ExtResource("9_byhrl")]
+position = Vector2(-1214, 201)
+
+[node name="tp_floor6" parent="." instance=ExtResource("9_byhrl")]
+position = Vector2(1404, -809)
+
+[node name="dungeon_key2" parent="." instance=ExtResource("6_rxk6f")]
+position = Vector2(-1770, 67)
+
+[node name="Enemy_Skeleton" parent="." instance=ExtResource("13_tcjvg")]
+position = Vector2(93, -240)
+scale = Vector2(1.5, 1.5)
+enemyHealth = 5
+
+[node name="Enemy_Skeleton2" parent="." instance=ExtResource("13_tcjvg")]
+position = Vector2(683, -199)
+
+[node name="Enemy_Skeleton3" parent="." instance=ExtResource("13_tcjvg")]
+position = Vector2(585, 139)
+
+[node name="Enemy_Skeleton4" parent="." instance=ExtResource("13_tcjvg")]
+position = Vector2(-458, -211)
+
+[node name="Enemy_Skeleton5" parent="." instance=ExtResource("13_tcjvg")]
+position = Vector2(1392, -410)
+
+[node name="Enemy_Skeleton6" parent="." instance=ExtResource("13_tcjvg")]
+position = Vector2(-1565, -165)
+
+[node name="Enemy_Skeleton7" parent="." instance=ExtResource("13_tcjvg")]
+position = Vector2(-1779, 6)
+
+[node name="Enemy_Skeleton8" parent="." instance=ExtResource("13_tcjvg")]
+position = Vector2(-1437, 186)
+
+[node name="closed_door2" parent="." instance=ExtResource("3_x5p0w")]
+position = Vector2(112, -994)
+
+[node name="Enemy_Skeleton9" parent="." instance=ExtResource("13_tcjvg")]
+position = Vector2(205, -900)
+scale = Vector2(2, 2)
+enemyHealth = 12
+
+[node name="RecolectableItem2" parent="." instance=ExtResource("11_rqeos")]
+position = Vector2(246, 51)
+iditem = 4
+value = 5
+
+[node name="RecolectableItem3" parent="." instance=ExtResource("11_rqeos")]
+position = Vector2(707, -595)
+iditem = 4
+value = 5
+
+[node name="RecolectableItem4" parent="." instance=ExtResource("11_rqeos")]
+position = Vector2(1214, 1)
+iditem = 1
+value = 2
+
+[node name="Chest2" parent="." instance=ExtResource("7_s20md")]
+position = Vector2(-392, -511)
+item_value = 20
+
+[node name="Chest3" parent="." instance=ExtResource("7_s20md")]
+position = Vector2(-1320, 144)
+item_value = 20
+
+[node name="Chest4" parent="." instance=ExtResource("7_s20md")]
+position = Vector2(-1796, -176)
+item_type = 4
+item_value = 5
+
+[node name="Chest5" parent="." instance=ExtResource("7_s20md")]
+position = Vector2(247, -422)
+item_type = 3
+item_value = 3
+
+[node name="RecolectableItem5" parent="." instance=ExtResource("11_rqeos")]
+position = Vector2(1230, -479)
+iditem = 4
+value = 5
+
+[node name="RecolectableItem6" parent="." instance=ExtResource("11_rqeos")]
+position = Vector2(-1611, -255)
+iditem = 5
+value = 3
+
+[node name="RecolectableItem7" parent="." instance=ExtResource("11_rqeos")]
+position = Vector2(1456, -349)
+iditem = 1
+value = 5
+
+[node name="Hookeable3" parent="." instance=ExtResource("8_byhrl")]
+position = Vector2(1407, -298)
+
+[node name="teleport_player15" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(96, -628)
+newPosition = Vector2(112, -789)
+
+[node name="teleport_player16" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(112, -747)
+newPosition = Vector2(96, -584)
+
+[node name="teleport_player17" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(112, -995)
+newPosition = Vector2(129, -1218)
+
+[node name="teleport_player18" parent="." instance=ExtResource("10_g8ohh")]
+position = Vector2(128, -1179)
+newPosition = Vector2(112, -963)
+
+[node name="LakeRune" parent="." instance=ExtResource("14_k3676")]
+position = Vector2(128, -1292)

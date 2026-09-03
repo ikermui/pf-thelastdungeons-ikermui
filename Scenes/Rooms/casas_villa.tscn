@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://cua607e3dd23r"]
+
+[ext_resource type="PackedScene" uid="uid://mn6rbs503bc4" path="res://Scenes/Tilemap/tm_casas_villa.tscn" id="1_a3rue"]
+[ext_resource type="PackedScene" uid="uid://b45ufs7ixxrti" path="res://Scenes/NPCs/healing_npc.tscn" id="2_6suda"]
+[ext_resource type="PackedScene" uid="uid://dsgt7qgmsnnit" path="res://Scenes/NPCs/sword_npc.tscn" id="3_ywmd0"]
+[ext_resource type="PackedScene" uid="uid://bc4cyaeeuy8uj" path="res://Scenes/NPCs/shop_npc.tscn" id="4_fnaj5"]
+[ext_resource type="PackedScene" uid="uid://d1aw725skuh60" path="res://Scenes/Player/player.tscn" id="5_jssdt"]
+[ext_resource type="PackedScene" uid="uid://bxukx3qifl07v" path="res://Scenes/Importants/change_room.tscn" id="6_oxxo7"]
+
+[node name="casas_villa" type="Node2D"]
+
+[node name="tm_casas_villa" parent="." instance=ExtResource("1_a3rue")]
+
+[node name="Healing_Npc" parent="." instance=ExtResource("2_6suda")]
+position = Vector2(1215, 419)
+
+[node name="sword_npc" parent="." instance=ExtResource("3_ywmd0")]
+position = Vector2(408, 414)
+
+[node name="Shop_Npc" parent="." instance=ExtResource("4_fnaj5")]
+position = Vector2(95, 105)
+dialogue = "res://Dialogues/shop_villaNPC.dialogue"
+
+[node name="Player" parent="." instance=ExtResource("5_jssdt")]
+position = Vector2(97, 170)
+
+[node name="ChangeRoom" parent="." instance=ExtResource("6_oxxo7")]
+position = Vector2(96, 198)
+nextScene = "res://Scenes/Rooms/villa_verde.tscn"
+initialPosition = Vector2(168, -73)
+
+[node name="ChangeRoom2" parent="." instance=ExtResource("6_oxxo7")]
+position = Vector2(544, 549)
+nextScene = "res://Scenes/Rooms/villa_verde.tscn"
+initialPosition = Vector2(-55, 342)
+
+[node name="ChangeRoom3" parent="." instance=ExtResource("6_oxxo7")]
+position = Vector2(1216, 535)
+nextScene = "res://Scenes/Rooms/villa_verde.tscn"
+initialPosition = Vector2(376, 471)
+
+[node name="ChangeRoom4" parent="." instance=ExtResource("6_oxxo7")]
+position = Vector2(672, 183)
+nextScene = "res://Scenes/Rooms/villa_verde.tscn"
+initialPosition = Vector2(345, 123)
+
+[node name="ChangeRoom5" parent="." instance=ExtResource("6_oxxo7")]
+position = Vector2(864, 104)
+nextScene = "res://Scenes/Rooms/villa_verde.tscn"
+initialPosition = Vector2(424, 69)

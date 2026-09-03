@@ -1,0 +1,15 @@
+~ start
+if DataNodeVariables.check_sword_level()
+	Chariot: ¿Te quieres mejorar la espada?.
+	- Mejorar Espada (200 Monedas)
+		if DataNodeVariables.check_coins(200)
+			do DataNodeVariables.improve_sword(200)
+			Chariot: Dejame un momento...
+			Chariot: Listo, aqui tienes la espada mejorada
+		else
+			Chariot: Vuelve cuando tengas dinero
+	- Nada
+		Chariot: Adios.
+else
+	Chariot: Ya no te puedo mejorar mas la espada
+=> END

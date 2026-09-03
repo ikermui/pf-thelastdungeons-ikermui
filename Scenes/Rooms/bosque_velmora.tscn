@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://d3ravchp5bp6b"]
+
+[ext_resource type="Script" uid="uid://bsdogiftn5f7w" path="res://Scripts/Rooms/bosque_velmora.gd" id="1_bky5i"]
+[ext_resource type="PackedScene" uid="uid://cmvieggs77gqy" path="res://Scenes/Tilemap/tm_bosque_velmora.tscn" id="1_tmhaa"]
+[ext_resource type="PackedScene" uid="uid://d1aw725skuh60" path="res://Scenes/Player/player.tscn" id="2_21xg3"]
+[ext_resource type="PackedScene" uid="uid://bxukx3qifl07v" path="res://Scenes/Importants/change_room.tscn" id="3_06ncn"]
+[ext_resource type="PackedScene" uid="uid://bvfnmyvfjgoyq" path="res://Scenes/Enemies/enemy_skeleton.tscn" id="4_06ncn"]
+[ext_resource type="PackedScene" uid="uid://c6ltla3oebx8o" path="res://Scenes/Items/chest.tscn" id="5_r8m44"]
+[ext_resource type="PackedScene" uid="uid://bfnxhlvyvltis" path="res://Scenes/NPCs/sign_npc.tscn" id="7_r15bs"]
+
+[node name="bosque_velmora" type="Node2D"]
+script = ExtResource("1_bky5i")
+
+[node name="tm_bosque_velmora" parent="." instance=ExtResource("1_tmhaa")]
+
+[node name="Player" parent="." instance=ExtResource("2_21xg3")]
+position = Vector2(115, -35)
+
+[node name="ChangeRoom" parent="." instance=ExtResource("3_06ncn")]
+position = Vector2(113, -74)
+scale = Vector2(2, 1)
+nextScene = "res://Scenes/Rooms/villa_verde.tscn"
+initialPosition = Vector2(376, 559)
+
+[node name="Enemy_Skeleton" parent="." instance=ExtResource("4_06ncn")]
+position = Vector2(113, 154)
+
+[node name="Enemy_Skeleton2" parent="." instance=ExtResource("4_06ncn")]
+position = Vector2(439, 187)
+
+[node name="Enemy_Skeleton3" parent="." instance=ExtResource("4_06ncn")]
+position = Vector2(940, -67)
+
+[node name="Enemy_Skeleton4" parent="." instance=ExtResource("4_06ncn")]
+position = Vector2(1289, 219)
+
+[node name="Enemy_Skeleton5" parent="." instance=ExtResource("4_06ncn")]
+position = Vector2(585, 654)
+
+[node name="Enemy_Skeleton6" parent="." instance=ExtResource("4_06ncn")]
+position = Vector2(-123, 1012)
+
+[node name="Enemy_Skeleton7" parent="." instance=ExtResource("4_06ncn")]
+position = Vector2(428, 1383)
+
+[node name="Chest" parent="." instance=ExtResource("5_r8m44")]
+position = Vector2(1319, 369)
+item_type = 2
+item_value = 30
+
+[node name="Chest2" parent="." instance=ExtResource("5_r8m44")]
+position = Vector2(904, -168)
+item_type = 4
+item_value = 5
+
+[node name="ChangeRoom2" parent="." instance=ExtResource("3_06ncn")]
+position = Vector2(168, 997)
+scale = Vector2(2, 2)
+nextScene = "res://Scenes/Rooms/water_temple.tscn"
+initialPosition = Vector2(97, 173)
+
+[node name="sign_npc" parent="." instance=ExtResource("7_r15bs")]
+position = Vector2(151, 4)
+dialogue = "res://Dialogues/cartelBosqueVelmora.dialogue"
+
+[node name="Chest3" parent="." instance=ExtResource("5_r8m44")]
+position = Vector2(394, 1455)
+item_type = 4
+item_value = 3

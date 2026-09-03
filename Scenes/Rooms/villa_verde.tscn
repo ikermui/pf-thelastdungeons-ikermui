@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8ddyknrrned8"]
+
+[ext_resource type="Script" uid="uid://bscul71osv1yd" path="res://Scripts/Rooms/villa_verde.gd" id="1_q1lj1"]
+[ext_resource type="PackedScene" uid="uid://7wwwwrbkcvwi" path="res://Scenes/Tilemap/tm_villa_verde.tscn" id="1_sytpx"]
+[ext_resource type="PackedScene" uid="uid://d1aw725skuh60" path="res://Scenes/Player/player.tscn" id="2_yt1ga"]
+[ext_resource type="PackedScene" uid="uid://bxukx3qifl07v" path="res://Scenes/Importants/change_room.tscn" id="3_04wib"]
+[ext_resource type="PackedScene" uid="uid://c6ltla3oebx8o" path="res://Scenes/Items/chest.tscn" id="5_aetbo"]
+[ext_resource type="PackedScene" uid="uid://42ttm3g17kwc" path="res://Scenes/Items/recolectable_item.tscn" id="6_26s5f"]
+[ext_resource type="PackedScene" uid="uid://b74rn0s4sqcvr" path="res://Scenes/NPCs/npc_talk_1.tscn" id="7_26s5f"]
+
+[node name="villa_verde" type="Node2D"]
+script = ExtResource("1_q1lj1")
+
+[node name="tm_villa_verde" parent="." instance=ExtResource("1_sytpx")]
+
+[node name="Player" parent="." instance=ExtResource("2_yt1ga")]
+position = Vector2(-226, 49)
+
+[node name="ChangeRoom" parent="." instance=ExtResource("3_04wib")]
+position = Vector2(-261, 53)
+scale = Vector2(1, 3)
+nextScene = "res://Scenes/Rooms/campo_velmora.tscn"
+initialPosition = Vector2(2082, 752)
+
+[node name="ChangeRoom2" parent="." instance=ExtResource("3_04wib")]
+position = Vector2(345, 84)
+nextScene = "res://Scenes/Rooms/casas_villa.tscn"
+initialPosition = Vector2(671, 155)
+
+[node name="ChangeRoom3" parent="." instance=ExtResource("3_04wib")]
+position = Vector2(424, 36)
+nextScene = "res://Scenes/Rooms/casas_villa.tscn"
+initialPosition = Vector2(864, 75)
+
+[node name="Chest" parent="." instance=ExtResource("5_aetbo")]
+position = Vector2(584, -763)
+item_value = 50
+
+[node name="RecolectableItem" parent="." instance=ExtResource("6_26s5f")]
+position = Vector2(673, -784)
+iditem = 2
+value = 20
+
+[node name="RecolectableItem2" parent="." instance=ExtResource("6_26s5f")]
+position = Vector2(808, -869)
+iditem = 5
+value = 3
+
+[node name="Npc_Talk1" parent="." instance=ExtResource("7_26s5f")]
+position = Vector2(728, -756)
+dialogue = "res://Dialogues/town_secretNPC.dialogue"
+
+[node name="ChangeRoom4" parent="." instance=ExtResource("3_04wib")]
+position = Vector2(169, -107)
+nextScene = "res://Scenes/Rooms/casas_villa.tscn"
+initialPosition = Vector2(97, 163)
+
+[node name="ChangeRoom5" parent="." instance=ExtResource("3_04wib")]
+position = Vector2(-56, 309)
+nextScene = "res://Scenes/Rooms/casas_villa.tscn"
+initialPosition = Vector2(544, 521)
+
+[node name="ChangeRoom6" parent="." instance=ExtResource("3_04wib")]
+position = Vector2(376, 436)
+nextScene = "res://Scenes/Rooms/casas_villa.tscn"
+initialPosition = Vector2(1216, 507)
+
+[node name="ChangeRoom7" parent="." instance=ExtResource("3_04wib")]
+position = Vector2(377, 606)
+scale = Vector2(3, 1)
+nextScene = "res://Scenes/Rooms/bosque_velmora.tscn"
+initialPosition = Vector2(111, -31)

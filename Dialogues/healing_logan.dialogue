@@ -1,0 +1,23 @@
+~ start
+Logan: ¿Necesitas alguno de mis hechizos?
+- Curar Vida (30 Monedas)
+	if DataNodeVariables.check_coins(30)
+		do DataNodeVariables.health_player(30)
+		Logan: El tejido de la vida ha sido remendado. Sigue tu camino
+	else
+		Logan: Vuelve cuando tengas dinero
+- Curar Magia (30 Monedas)
+	if DataNodeVariables.check_coins(30)
+		do DataNodeVariables.magic_player(30)
+		Logan: Tus reservas estan llenas. Sigue tu camino
+	else
+		Logan: Vuelve cuando tengas dinero
+- Curar Vida y Magia (50 Monedas)
+	if DataNodeVariables.check_coins(50)
+		do DataNodeVariables.heal_player(50)
+		Logan: El eco de tu esencia vuelve a resonar en el plano correcto.
+	else
+		Logan: Vuelve cuando tengas dinero
+- He cambiado de opinion
+	Logan: Hasta que el viento vuelva a traerte.
+=> END

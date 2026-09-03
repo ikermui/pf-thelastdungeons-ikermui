@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bvoryhrij8mgn"
+path="res://.godot/imported/cartelBosqueVelmora.dialogue-82a997dd2ec92c704a6e81cd673f103c.tres"
+
+[deps]
+
+source_file="res://Dialogues/cartelBosqueVelmora.dialogue"
+dest_files=["res://.godot/imported/cartelBosqueVelmora.dialogue-82a997dd2ec92c704a6e81cd673f103c.tres"]
+
+[params]
+
+defaults=true

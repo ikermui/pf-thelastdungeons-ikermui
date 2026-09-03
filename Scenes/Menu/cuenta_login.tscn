@@ -1,0 +1,120 @@
+[gd_scene load_steps=8 format=3 uid="uid://beohxrk8jhrtr"]
+
+[ext_resource type="Texture2D" uid="uid://bfrm0fvwadsw4" path="res://Resources/UI/menubackground.jpg" id="1_1d3pa"]
+[ext_resource type="Script" uid="uid://hau78c1fhto4" path="res://Scripts/Menu/cuenta_login.gd" id="1_v2of7"]
+[ext_resource type="FontFile" uid="uid://btktu5slgjifh" path="res://Resources/Fonts/zeldadxt.ttf" id="2_v2of7"]
+[ext_resource type="Theme" uid="uid://dpw51owdlkggh" path="res://Themes/button_theme.tres" id="4_x0w5t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x0w5t"]
+font = ExtResource("2_v2of7")
+font_size = 18
+font_color = Color(0, 0.615686, 0.329412, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8gpjv"]
+font = ExtResource("2_v2of7")
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v2of7"]
+font_size = 11
+font_color = Color(1, 0, 0, 1)
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[node name="cuenta_login" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v2of7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+scale = Vector2(0.32, 0.295385)
+texture = ExtResource("1_1d3pa")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 234.0
+offset_bottom = 36.0
+text = "LOGIN"
+label_settings = SubResource("LabelSettings_x0w5t")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 52.0
+offset_right = 111.0
+offset_bottom = 75.0
+text = "Email:"
+label_settings = SubResource("LabelSettings_8gpjv")
+
+[node name="TextEmail" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 70.0
+offset_right = 208.0
+offset_bottom = 92.0
+theme_override_fonts/font = ExtResource("2_v2of7")
+theme_override_font_sizes/font_size = 10
+placeholder_text = "Pon tu email"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 96.0
+offset_right = 152.0
+offset_bottom = 119.0
+text = "Contraseña:"
+label_settings = SubResource("LabelSettings_8gpjv")
+
+[node name="TextPassword" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 117.0
+offset_right = 207.0
+offset_bottom = 139.0
+theme_override_fonts/font = ExtResource("2_v2of7")
+theme_override_font_sizes/font_size = 10
+placeholder_text = "Pon tu contraseña"
+max_length = 20
+expand_to_text_length = true
+secret = true
+
+[node name="B_Volver" type="Button" parent="."]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 144.0
+offset_right = 115.0
+offset_bottom = 175.0
+theme = ExtResource("4_x0w5t")
+text = "Volver"
+
+[node name="B_Entrar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 144.0
+offset_right = 179.0
+offset_bottom = 175.0
+theme = ExtResource("4_x0w5t")
+text = "Entrar"
+
+[node name="MensajeError" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 33.0
+offset_top = 30.0
+offset_right = 205.0
+offset_bottom = 53.0
+text = "Correo o contraseña incorrectos"
+label_settings = SubResource("LabelSettings_v2of7")
+
+[connection signal="pressed" from="B_Volver" to="." method="volver"]
+[connection signal="pressed" from="B_Entrar" to="." method="entrar"]

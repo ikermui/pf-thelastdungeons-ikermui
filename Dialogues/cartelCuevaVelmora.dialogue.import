@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://d2tjipxoveh7e"
+path="res://.godot/imported/cartelCuevaVelmora.dialogue-0ea1564f9908a3e13df5587edce2c974.tres"
+
+[deps]
+
+source_file="res://Dialogues/cartelCuevaVelmora.dialogue"
+dest_files=["res://.godot/imported/cartelCuevaVelmora.dialogue-0ea1564f9908a3e13df5587edce2c974.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://r00ncfute265"
+path="res://.godot/imported/sword_npc.dialogue-aea3f1cc3dadd22ee7e908194ee5f3a3.tres"
+
+[deps]
+
+source_file="res://Dialogues/sword_npc.dialogue"
+dest_files=["res://.godot/imported/sword_npc.dialogue-aea3f1cc3dadd22ee7e908194ee5f3a3.tres"]
+
+[params]
+
+defaults=true

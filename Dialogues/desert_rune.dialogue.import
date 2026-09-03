@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bj0aafrrdpt85"
+path="res://.godot/imported/desert_rune.dialogue-a96820ff23909d42df629ba7121064aa.tres"
+
+[deps]
+
+source_file="res://Dialogues/desert_rune.dialogue"
+dest_files=["res://.godot/imported/desert_rune.dialogue-a96820ff23909d42df629ba7121064aa.tres"]
+
+[params]
+
+defaults=true

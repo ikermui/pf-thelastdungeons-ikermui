@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfnxhlvyvltis"]
+
+[ext_resource type="PackedScene" uid="uid://crudiqlm7dsv0" path="res://Scenes/Importants/action_area.tscn" id="1_j3ybg"]
+[ext_resource type="Script" uid="uid://cvebh8nr8skje" path="res://Scripts/NPCs/sign_npc.gd" id="1_tuwi5"]
+[ext_resource type="Texture2D" uid="uid://bls78j28bi1w0" path="res://Resources/NPCs/Woods Objects.png" id="2_i3x54"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkysr"]
+size = Vector2(12, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5dnth"]
+size = Vector2(16, 15)
+
+[node name="sign_npc" type="Node2D"]
+script = ExtResource("1_tuwi5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_i3x54")
+
+[node name="ActionArea" parent="." instance=ExtResource("1_j3ybg")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionArea"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_fkysr")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_5dnth")
+debug_color = Color(3.46541e-06, 0.828372, 0.963238, 0.42)

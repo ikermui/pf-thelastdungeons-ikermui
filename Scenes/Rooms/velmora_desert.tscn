@@ -1,0 +1,111 @@
+[gd_scene load_steps=10 format=3 uid="uid://ngt6vej6tahh"]
+
+[ext_resource type="Script" uid="uid://bys223t1bfmo0" path="res://Scripts/Rooms/velmora_desert.gd" id="1_6np7d"]
+[ext_resource type="PackedScene" uid="uid://bhr3ybrl70erf" path="res://Scenes/Tilemap/tm_velmora_desert.tscn" id="1_t4fo4"]
+[ext_resource type="PackedScene" uid="uid://d1aw725skuh60" path="res://Scenes/Player/player.tscn" id="2_upxne"]
+[ext_resource type="PackedScene" uid="uid://bxukx3qifl07v" path="res://Scenes/Importants/change_room.tscn" id="3_upxne"]
+[ext_resource type="PackedScene" uid="uid://bvfnmyvfjgoyq" path="res://Scenes/Enemies/enemy_skeleton.tscn" id="5_hxdl5"]
+[ext_resource type="PackedScene" uid="uid://c6ltla3oebx8o" path="res://Scenes/Items/chest.tscn" id="6_kn07b"]
+[ext_resource type="PackedScene" uid="uid://42ttm3g17kwc" path="res://Scenes/Items/recolectable_item.tscn" id="7_8x01a"]
+[ext_resource type="PackedScene" uid="uid://b74rn0s4sqcvr" path="res://Scenes/NPCs/npc_talk_1.tscn" id="8_1dmxa"]
+[ext_resource type="PackedScene" uid="uid://bfnxhlvyvltis" path="res://Scenes/NPCs/sign_npc.tscn" id="9_vn267"]
+
+[node name="velmora_desert" type="Node2D"]
+script = ExtResource("1_6np7d")
+
+[node name="tm_velmora_desert" parent="." instance=ExtResource("1_t4fo4")]
+
+[node name="Player" parent="." instance=ExtResource("2_upxne")]
+position = Vector2(-345, 263)
+
+[node name="ChangeRoom" parent="." instance=ExtResource("3_upxne")]
+position = Vector2(312, 182)
+nextScene = "res://Scenes/Rooms/cueva_velmora.tscn"
+initialPosition = Vector2(408, 97)
+
+[node name="ChangeRoom2" parent="." instance=ExtResource("3_upxne")]
+position = Vector2(-343, 218)
+nextScene = "res://Scenes/Rooms/desert_temple.tscn"
+initialPosition = Vector2(158, 155)
+
+[node name="ChangeRoom3" parent="." instance=ExtResource("3_upxne")]
+position = Vector2(-616, 151)
+nextScene = "res://Scenes/Rooms/cueva_velmora.tscn"
+initialPosition = Vector2(-1096, 621)
+
+[node name="ChangeRoom4" parent="." instance=ExtResource("3_upxne")]
+position = Vector2(-296, 615)
+nextScene = "res://Scenes/Rooms/cueva_velmora.tscn"
+initialPosition = Vector2(-856, 487)
+
+[node name="ChangeRoom5" parent="." instance=ExtResource("3_upxne")]
+position = Vector2(-72, 586)
+nextScene = "res://Scenes/Rooms/cueva_velmora.tscn"
+initialPosition = Vector2(-328, 542)
+
+[node name="Enemy_Skeleton" parent="." instance=ExtResource("5_hxdl5")]
+position = Vector2(-64, 113)
+enemyHealth = 4
+
+[node name="Enemy_Skeleton2" parent="." instance=ExtResource("5_hxdl5")]
+position = Vector2(-157, 382)
+enemyHealth = 5
+
+[node name="Enemy_Skeleton3" parent="." instance=ExtResource("5_hxdl5")]
+position = Vector2(81, 323)
+enemyHealth = 4
+
+[node name="Chest" parent="." instance=ExtResource("6_kn07b")]
+z_index = 3
+position = Vector2(-232, 211)
+scale = Vector2(1.25, 1.25)
+item_value = 50
+
+[node name="Chest2" parent="." instance=ExtResource("6_kn07b")]
+position = Vector2(-72, 522)
+scale = Vector2(1.25, 1.25)
+item_value = 25
+
+[node name="RecolectableItem" parent="." instance=ExtResource("7_8x01a")]
+position = Vector2(54, 478)
+iditem = 4
+value = 5
+
+[node name="RecolectableItem2" parent="." instance=ExtResource("7_8x01a")]
+position = Vector2(-424, 530)
+iditem = 5
+value = 2
+
+[node name="RecolectableItem3" parent="." instance=ExtResource("7_8x01a")]
+position = Vector2(-615, -32)
+iditem = 4
+value = 3
+
+[node name="RecolectableItem4" parent="." instance=ExtResource("7_8x01a")]
+position = Vector2(-123, 235)
+iditem = 3
+value = 3
+
+[node name="RecolectableItem5" parent="." instance=ExtResource("7_8x01a")]
+position = Vector2(-71, 17)
+iditem = 4
+value = 3
+
+[node name="RecolectableItem6" parent="." instance=ExtResource("7_8x01a")]
+position = Vector2(19, 432)
+iditem = 5
+value = 2
+
+[node name="RecolectableItem7" parent="." instance=ExtResource("7_8x01a")]
+position = Vector2(383, 18)
+iditem = 1
+value = 3
+
+[node name="Npc_Talk1" parent="." instance=ExtResource("8_1dmxa")]
+z_index = 3
+position = Vector2(-335, -20)
+dialogue = "res://Dialogues/secretNPCdesert.dialogue"
+
+[node name="sign_npc" parent="." instance=ExtResource("9_vn267")]
+position = Vector2(335, 104)
+dialogue = "res://Dialogues/cartelDesiertoVelmora.dialogue"

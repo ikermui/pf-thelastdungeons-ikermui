@@ -1,0 +1,31 @@
+~ start
+Vendedora: Hola, buenos dias.
+~ choice
+Vendedora: ¿Que desea?.
+- Bombas x10 (50 Monedas)
+	if DataNodeVariables.check_coins(50)
+		if DataNodeVariables.check_bombs()
+			do DataNodeVariables.buy_bombs(10, 50)
+			Vendedora: Muchas gracias por su contribución señor!. 
+		else
+			Vendedora: Ya no te caben mas bombas.
+	else
+		Vendedora: No tienes dinero suficiente...
+- Flechas x15 (40 Monedas)
+	if DataNodeVariables.check_coins(40)
+		if DataNodeVariables.check_arrows()
+			do DataNodeVariables.buy_arrows(15, 40)
+			Vendedora: Una muy buena elección! 
+		else
+			Vendedora: Ya no te caben mas flechas.
+	else
+		Vendedora: No tienes dinero suficiente...
+	
+- Hablar
+	Vendedora: ¿Sabias que te puedes mejorar la espada?
+	Vendedora: En la villa al noreste de la región hay un herrero que por un módico precio te mejora la espada
+	=> choice
+- Solo estaba mirando
+	Vendedora: ¡Hasta luego!
+	=> END
+=> choice

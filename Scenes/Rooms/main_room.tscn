@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7faomc4fw52"]
+
+[ext_resource type="PackedScene" uid="uid://btw1l7u0u4uan" path="res://Scenes/Importants/data_controller.tscn" id="1_e2jpr"]
+[ext_resource type="PackedScene" uid="uid://prj1ueho7sj" path="res://Scenes/Rooms/casa_start.tscn" id="3_k4te6"]
+[ext_resource type="PackedScene" uid="uid://b6mcif4t6udw2" path="res://Scenes/UI/ui_main.tscn" id="3_ld3ea"]
+[ext_resource type="PackedScene" uid="uid://diunyks3syg0b" path="res://Scenes/Importants/config_controller.tscn" id="3_uc2lk"]
+[ext_resource type="PackedScene" uid="uid://bfq13d1f0d3f7" path="res://Scenes/UI/mobile_controls.tscn" id="5_uc2lk"]
+
+[node name="MainRoom" type="Node2D"]
+
+[node name="DataController" parent="." instance=ExtResource("1_e2jpr")]
+
+[node name="ConfigController" parent="." instance=ExtResource("3_uc2lk")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UIMain" parent="CanvasLayer" instance=ExtResource("3_ld3ea")]
+
+[node name="MobileControls" parent="." instance=ExtResource("5_uc2lk")]
+visible = false
+
+[node name="casa_start" parent="." instance=ExtResource("3_k4te6")]

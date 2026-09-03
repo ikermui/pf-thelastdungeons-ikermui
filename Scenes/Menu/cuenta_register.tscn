@@ -1,0 +1,245 @@
+[gd_scene load_steps=11 format=3 uid="uid://cs3exavacyfci"]
+
+[ext_resource type="Script" uid="uid://bt84g6hgxct71" path="res://Scripts/Menu/cuenta_register.gd" id="1_3k0yc"]
+[ext_resource type="Texture2D" uid="uid://bfrm0fvwadsw4" path="res://Resources/UI/menubackground.jpg" id="1_787ud"]
+[ext_resource type="FontFile" uid="uid://btktu5slgjifh" path="res://Resources/Fonts/zeldadxt.ttf" id="2_3k0yc"]
+[ext_resource type="Theme" uid="uid://dpw51owdlkggh" path="res://Themes/button_theme.tres" id="4_3ydkj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3ydkj"]
+font = ExtResource("2_3k0yc")
+font_size = 18
+font_color = Color(0, 0.615686, 0.329412, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_787ud"]
+font = ExtResource("2_3k0yc")
+font_size = 12
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontFile" id="FontFile_3k0yc"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/7/0/ascent = 0.0
+cache/0/7/0/descent = 0.0
+cache/0/7/0/underline_position = 0.0
+cache/0/7/0/underline_thickness = 0.0
+cache/0/7/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/8/0/ascent = 0.0
+cache/0/8/0/descent = 0.0
+cache/0/8/0/underline_position = 0.0
+cache/0/8/0/underline_thickness = 0.0
+cache/0/8/0/scale = 1.0
+cache/0/9/0/ascent = 0.0
+cache/0/9/0/descent = 0.0
+cache/0/9/0/underline_position = 0.0
+cache/0/9/0/underline_thickness = 0.0
+cache/0/9/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/11/0/ascent = 0.0
+cache/0/11/0/descent = 0.0
+cache/0/11/0/underline_position = 0.0
+cache/0/11/0/underline_thickness = 0.0
+cache/0/11/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/13/0/ascent = 0.0
+cache/0/13/0/descent = 0.0
+cache/0/13/0/underline_position = 0.0
+cache/0/13/0/underline_thickness = 0.0
+cache/0/13/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_c3kek"]
+font = SubResource("FontFile_3k0yc")
+font_size = 10
+font_color = Color(0, 1, 0, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontFile" id="FontFile_8y7uk"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/15/0/ascent = 0.0
+cache/0/15/0/descent = 0.0
+cache/0/15/0/underline_position = 0.0
+cache/0/15/0/underline_thickness = 0.0
+cache/0/15/0/scale = 1.0
+cache/0/14/0/ascent = 0.0
+cache/0/14/0/descent = 0.0
+cache/0/14/0/underline_position = 0.0
+cache/0/14/0/underline_thickness = 0.0
+cache/0/14/0/scale = 1.0
+cache/0/13/0/ascent = 0.0
+cache/0/13/0/descent = 0.0
+cache/0/13/0/underline_position = 0.0
+cache/0/13/0/underline_thickness = 0.0
+cache/0/13/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/11/0/ascent = 0.0
+cache/0/11/0/descent = 0.0
+cache/0/11/0/underline_position = 0.0
+cache/0/11/0/underline_thickness = 0.0
+cache/0/11/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_3merx"]
+font = SubResource("FontFile_8y7uk")
+font_size = 10
+font_color = Color(1, 0, 0, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="cuenta_register" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3k0yc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+scale = Vector2(0.32, 0.295385)
+texture = ExtResource("1_787ud")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 6.0
+offset_right = 235.0
+offset_bottom = 32.0
+text = "REGISTER"
+label_settings = SubResource("LabelSettings_3ydkj")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 78.0
+offset_right = 117.0
+offset_bottom = 101.0
+text = "Email:"
+label_settings = SubResource("LabelSettings_787ud")
+
+[node name="TextEmail" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 93.0
+offset_right = 218.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("2_3k0yc")
+theme_override_font_sizes/font_size = 10
+placeholder_text = "Pon tu email"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 117.0
+offset_right = 163.0
+offset_bottom = 140.0
+text = "Contraseña:"
+label_settings = SubResource("LabelSettings_787ud")
+
+[node name="TextPassword" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 132.0
+offset_right = 218.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("2_3k0yc")
+theme_override_font_sizes/font_size = 10
+placeholder_text = "Pon tu contraseña"
+max_length = 20
+expand_to_text_length = true
+secret = true
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 216.0
+offset_bottom = 63.0
+text = "Nombre de Usuario:"
+label_settings = SubResource("LabelSettings_787ud")
+
+[node name="TextNombre" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 56.0
+offset_right = 218.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("2_3k0yc")
+theme_override_font_sizes/font_size = 10
+placeholder_text = "Pon tu nombre"
+max_length = 20
+expand_to_text_length = true
+
+[node name="B_Volver" type="Button" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 155.0
+offset_right = 117.0
+offset_bottom = 186.0
+theme = ExtResource("4_3ydkj")
+text = "Volver"
+
+[node name="B_Entrar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 155.0
+offset_right = 193.0
+offset_bottom = 186.0
+theme = ExtResource("4_3ydkj")
+text = "Entrar"
+
+[node name="MensajeExito" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 26.0
+offset_top = 22.0
+offset_right = 277.0
+offset_bottom = 45.0
+text = "Usuario Registrado, inicia sesion para continuar"
+label_settings = SubResource("LabelSettings_c3kek")
+
+[node name="MensajeError" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 47.0
+offset_top = 23.0
+offset_right = 267.0
+offset_bottom = 42.0
+text = "Ya existe una cuenta con ese correo"
+label_settings = SubResource("LabelSettings_3merx")
+
+[connection signal="pressed" from="B_Volver" to="." method="volver"]
+[connection signal="pressed" from="B_Entrar" to="." method="entrar"]
